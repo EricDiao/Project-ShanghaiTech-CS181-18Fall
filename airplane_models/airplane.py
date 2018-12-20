@@ -14,22 +14,22 @@ class baseAirplane:
     Please DO NOT use this in practice. See the comments below for more information.
     """
 
-    def __init__(self, type=None, flight=None, registration=None, depature=None, destination=None, eta=None, etd=None):
-        self._type = type
-        self._flight = flight
+    def __init__(self, flightType=None, flight=None, registration=None, depature=None, destination=None, eta=None, etd=None):
+        self._type = flightType.upper()
+        self._flight = flight.upper()
         # The flight number. Consists of two-character airline designator and a 1 to 4 digit number. For example, flight number CA981 stands for Air China flight number 981 (it departs Beijing's PEK and goes to New York's JFK). See https://en.wikipedia.org/wiki/Airline_codes#IATA_airline_designator for list of airline designator.
         # If there is no flight number for this flight (e.g. for private flight), use its egistration (of self._registrayion).
-        self._registration = registration.capitalize()
+        self._registration = registration.upper()
         # In the ICAO format. For example, all chinese airplanes' registration has prefix `B` (with an optional dash)
         # and 4 characters (number and english letter) (for mainland China). e.g. B-123A.
-        self._depatureCity = depature.capitalize()
-        self._destination = destination.capitalize()
+        self._depatureCity = depature.upper()
+        self._destination = destination.upper()
         # Above two are in the ICAO airport code format. For example, ZUUU for Chengdu/Shuangliu, ZSPD for Shanghai/Pudong.
         # see: https://en.wikipedia.org/wiki/List_of_airports_by_IATA_and_ICAO_code
         self._ETA = eta
         self._ETD = etd
         # Above two are in the UNIX timestamp format (We are CS student, right? And also we do not needs to deal with events before 1970-01-01 12:00, right?). e.g. (int) 15700000
-        self._spec = {}
+        self._spec = {"maxSpeed": 101}
         # below are `dynamic` parameters that could change through time.
         self._heading = 0.0
         # range from 0.0 to 360.0 (in degree)
@@ -44,7 +44,8 @@ class baseAirplane:
         # If you wonder what is a `Squawk`, refer to https://en.wikipedia.org/wiki/Transponder_(aeronautics).
 
     def __repr__(self):
-        return "[{}] {} {} @ ({}, {}) - {}".format(self._squawk, self._registration, self._type, self._longitude, self._latitude, self._alititude)
+        # return "[{}] {} {} @ ({}, {}) - {}".format(self._squawk, self._registration, self._type, self._longitude, self._latitude, self._alititude)
+        return "{}\n{}-{}\n{}\n{}\n{}".format(self._flight, self._depatureCity, self.destination, self.type, self._registration, self.squawk)
 
     @property
     def registration(self):
@@ -93,12 +94,13 @@ class baseAirplane:
 
     @groundSpeed.setter
     def groundSpeed(self, value):
-        if value > self._spec['maxSpeed']:
+        if value > self._spec['maxSpeed'] or value < 0:
             raise ValueError
         self._groundSpeed = value
 
     def getAirSpeed(self, airSpeed, airSpeedHeading):
         pass
+        # TODO: calculate speed.
 
     @property
     def postion(self):
@@ -115,10 +117,28 @@ class baseAirplane:
 
     @heading.setter
     def heading(self, value):
-        if value < 0:
+        if value < 0.0 or value > 360.0:
             raise ValueError
         self._heading = value
 
     @property
     def alititude(self):
         return self._alititude
+
+def baseAirplaneTest():
+    test = baseAirplane(flightType="A330", flight="Ca1999",
+                            registration="b-6878", depature="PVG", destination="ctu")
+    print("Testing class `baseAirplane`.")
+    print(test)
+    print("Getting values.")
+    print(test.groundSpeed, test.getSpec())
+    test.groundSpeed = 100
+    print("groundSpeed set to {}".format(test.groundSpeed))
+    try:
+        test.groundSpeed = -1
+    except ValueError:
+        print("Negative speed test passed.")
+    print('Test passed.')
+
+if __name__ == "__main__":
+    baseAirplaneTest()
