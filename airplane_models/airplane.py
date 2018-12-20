@@ -29,19 +29,20 @@ class baseAirplane:
         self._ETA = eta
         self._ETD = etd
         # Above two are in the UNIX timestamp format (We are CS student, right? And also we do not needs to deal with events before 1970-01-01 12:00, right?). e.g. (int) 15700000
-        self._spec = {"maxSpeed": 101}
+        self._spec = {"maxSpeed": 101, "ceiling": 1250}
         # below are `dynamic` parameters that could change through time.
         self._heading = 0.0
         # range from 0.0 to 360.0 (in degree)
         self._longitude = 0.0
         self._latitude = 0.0
-        # 经纬度。 In float format. e.g 31.12345
+        # In float format. e.g 31.12345
         self._alititude = 0.0
         # In meters.
         self._groundSpeed = 0.0
-        # 海里。
+        # hm
         self._squawk = '7700'  # NOTE: this is a str.
         # If you wonder what is a `Squawk`, refer to https://en.wikipedia.org/wiki/Transponder_(aeronautics).
+        self.priority = 0
 
     def __repr__(self):
         # return "[{}] {} {} @ ({}, {}) - {}".format(self._squawk, self._registration, self._type, self._longitude, self._latitude, self._alititude)
@@ -108,8 +109,12 @@ class baseAirplane:
 
     @postion.setter
     def postion(self, value):
-        self._longitude = value[0]
-        self._latitude = value[1]
+        longitude = value[0]
+        latitude = value[1]
+        if abs(longitude) > 180.0 and abs(latitude) > 90.0:
+            raise ValueError
+        self._longitude = longitude
+        self._latitude = latitude
 
     @property
     def heading(self):
@@ -125,20 +130,91 @@ class baseAirplane:
     def alititude(self):
         return self._alititude
 
+    @alititude.setter
+    def alititude(self, value):
+        if value > self._spec['ceiling']:
+            raise ValueError
+            # TODO: specify a certain error for that.
+        self._alititude = value
+
+    def takeAction(self, actionParam):
+        pass
+        # TODO: waiting for the environment.
+
+
+class genericAirplane(baseAirplane):
+    """
+    `genericAirplane(flightType=None, flight=None, registration=None, depature=None, destination=None, eta=None, etd=None)`
+
+    This is the default consturctor of an Airplane model.
+
+    The `flightType` specify the model of the consturcted airplane. The
+    constuctor will look for the corresponding `json` file in this directory
+    and load it to self._spec.
+    """
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self._getSpecFromFile()
+
+    def _getSpecFromFile(self):
+        fileName = "{}{}.json".format("./models/", self._type)
+        with open(fileName) as f:
+            self._spec = simplejson.load(f)
+
+
 def baseAirplaneTest():
-    test = baseAirplane(flightType="A330", flight="Ca1999",
-                            registration="b-6878", depature="PVG", destination="ctu")
     print("Testing class `baseAirplane`.")
+    test = baseAirplane(flightType="A330", flight="Ca1999",
+                        registration="b-6878", depature="PVG", destination="ctu")
     print(test)
-    print("Getting values.")
-    print(test.groundSpeed, test.getSpec())
-    test.groundSpeed = 100
-    print("groundSpeed set to {}".format(test.groundSpeed))
+    print(test.__dict__)
+    old_val = test.__dict__
     try:
-        test.groundSpeed = -1
+        test.postion = (181.0, 91.0)
+        print("Postion test failed.")
     except ValueError:
-        print("Negative speed test passed.")
-    print('Test passed.')
+        print("Postion test passed.")
+    try:
+        test.heading = 361.0
+        print("Heading test failed.")
+    except ValueError:
+        print("Heading test passed.")
+    try:
+        test.alititude = 12501
+        print("Ceiling test failed.")
+    except ValueError:
+        print("Ceiling test passed.")
+    assert test.__dict__ == old_val
+    print("All test passed.")
+
+
+def genericAirplaneTest():
+    print("Testing class `genericAirplane`.")
+    test = genericAirplane(flightType="A320", flight="Ca1999",
+                           registration="b-6878", depature="PVG", destination="ctu")
+    print(test)
+    print(test.__dict__)
+    old_val = test.__dict__
+    try:
+        test.postion = (181.0, 91.0)
+        print("Postion test failed.")
+    except ValueError:
+        print("Postion test passed.")
+    try:
+        test.heading = 361.0
+        print("Heading test failed.")
+    except ValueError:
+        print("Heading test passed.")
+    try:
+        test.alititude = 12501
+        print("Ceiling test failed.")
+    except ValueError:
+        print("Ceiling test passed.")
+    assert test.__dict__ == old_val
+    print("All test passed.")
+
 
 if __name__ == "__main__":
     baseAirplaneTest()
+    genericAirplaneTest()
