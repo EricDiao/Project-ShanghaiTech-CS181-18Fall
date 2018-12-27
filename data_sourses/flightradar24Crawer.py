@@ -36,7 +36,7 @@ def crawlFR24(border):
                 for i in range(len(result[item])):
                     if result[item][i] == '':
                         result[item][i] = None
-                print(result[item])
+                #print(result[item])
                 thisPlane = {}
                 if len(result[item]) >= 19:
                     thisPlane['longtitude'] = result[item][1]
