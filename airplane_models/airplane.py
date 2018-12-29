@@ -36,7 +36,7 @@ class baseAirplane:
         self._longitude = 0.0
         self._latitude = 0.0
         # In float format. e.g 31.12345
-        self._alititude = 0.0
+        self._altitude = 0.0
         # In meters.
         self._groundSpeed = 0.0
         # hm
@@ -45,7 +45,7 @@ class baseAirplane:
         self.priority = 0
 
     def __repr__(self):
-        # return "[{}] {} {} @ ({}, {}) - {}".format(self._squawk, self._registration, self._type, self._longitude, self._latitude, self._alititude)
+        # return "[{}] {} {} @ ({}, {}) - {}".format(self._squawk, self._registration, self._type, self._longitude, self._latitude, self._altitude)
         return "{}\n{}-{}\n{}\n{}\n{}".format(self._flight, self._depatureCity, self.destination, self.type, self._registration, self.squawk)
 
     @property
@@ -127,15 +127,15 @@ class baseAirplane:
         self._heading = value
 
     @property
-    def alititude(self):
-        return self._alititude
+    def altitude(self):
+        return self._altitude
 
-    @alititude.setter
-    def alititude(self, value):
+    @altitude.setter
+    def altitude(self, value):
         if value > self._spec['ceiling']:
             raise ValueError
             # TODO: specify a certain error for that.
-        self._alititude = value
+        self._altitude = value
 
     def takeAction(self, actionParam):
         pass
@@ -181,7 +181,7 @@ def baseAirplaneTest():
     except ValueError:
         print("Heading test passed.")
     try:
-        test.alititude = 12501
+        test.altitude = 12501
         print("Ceiling test failed.")
     except ValueError:
         print("Ceiling test passed.")
@@ -207,7 +207,7 @@ def genericAirplaneTest():
     except ValueError:
         print("Heading test passed.")
     try:
-        test.alititude = 12501
+        test.altitude = 12501
         print("Ceiling test failed.")
     except ValueError:
         print("Ceiling test passed.")
