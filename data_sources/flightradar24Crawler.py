@@ -3,7 +3,7 @@
 #
 # Copyright 2018 Diao Zihao <hi@ericdiao.com>. All right reserved.
 
-import requests, time
+import requests, time, logging
 
 FR24_API_URL = "https://data-live.flightradar24.com/zones/fcgi/feed.js?bounds={},{},{},{}&faa=1&mlat=1&flarm=1&adsb=1&gnd=1&air=1&vehicles=1&estimated=1&maxage=14400&gliders=1&stats=1"
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
@@ -30,6 +30,7 @@ def crawlFR24(border):
                                               latitudelowerLimit, latitudeUppperLimit), headers={"User-Agent": USER_AGENT})
     airplanes = []
     if result.ok:
+        logging.info("crawlFR24: data got from flightradar24.")
         result = result.json()
         for item in result:
             if isinstance(result[item], list):
@@ -51,6 +52,8 @@ def crawlFR24(border):
                     thisPlane['destination'] = result[item][12]
                     thisPlane['flight'] = result[item][13]
                     airplanes.append(thisPlane)
+    else:
+        logging.warning("crawlFR24: can't get data from flightradar24, returning empty data.")
     return airplanes
 
 def crawlFR24MultiprocessingWrapper(border, queue, interval):
@@ -64,10 +67,13 @@ def crawlFR24MultiprocessingWrapper(border, queue, interval):
 
     Please be NOTE: because the data is from real world, some attribute may be missed.
     """
+    logging.info("Data provider: initialized with border {}, interval {}".format(border, interval))
     while True:
         result = {}
         result[time.time()] = crawlFR24(border)
+        logging.info("Data provider: get data.")
         queue.put(result)
+        logging.info("Data provider: data put into data queue.")
         time.sleep(interval)
 
 
