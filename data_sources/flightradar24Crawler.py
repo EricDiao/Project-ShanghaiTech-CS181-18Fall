@@ -3,7 +3,7 @@
 #
 # Copyright 2018 Diao Zihao <hi@ericdiao.com>. All right reserved.
 
-import requests
+import requests, time
 
 FR24_API_URL = "https://data-live.flightradar24.com/zones/fcgi/feed.js?bounds={},{},{},{}&faa=1&mlat=1&flarm=1&adsb=1&gnd=1&air=1&vehicles=1&estimated=1&maxage=14400&gliders=1&stats=1"
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
@@ -53,8 +53,26 @@ def crawlFR24(border):
                     airplanes.append(thisPlane)
     return airplanes
 
+def crawlFR24MultiprocessingWrapper(border, queue, interval):
+    """
+    `crawlFR24MultiprocessingWrapper(border, queue, interval)`
+
+    `border = [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22), ]`
+
+    This function is a wrapper of `crawlFR24(border)`. It crawlers realtime flight data
+    from FlightRadar24.com within the border, then put it into a queue that is asscessiable to the learning part.
+
+    Please be NOTE: because the data is from real world, some attribute may be missed.
+    """
+    while True:
+        result = {}
+        result[time.time()] = crawlFR24(border)
+        queue.put(result)
+        time.sleep(interval)
+
 
 if __name__ == "__main__":
     border = [(31.13, 102.28), (29.51, 102.28),
               (31.13, 106.22), (29.51, 106.22), ]
     print(crawlFR24(border))
+    print(crawlFR24MultiprocessingWrapper(border, None, 5))
