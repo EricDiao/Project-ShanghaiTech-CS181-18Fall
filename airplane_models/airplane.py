@@ -3,8 +3,10 @@
 #
 # Copyright 2018 Diao Zihao <hi@ericdiao.com>. All right reserved.
 
-import simplejson
+import simplejson,os
 from math import sin, cos, tan
+
+import airplane_models
 
 
 class baseAirplane:
@@ -158,7 +160,7 @@ class genericAirplane(baseAirplane):
         self._getSpecFromFile()
 
     def _getSpecFromFile(self):
-        fileName = "{}{}.json".format("./models/", self._type)
+        fileName = "{}{}{}.json".format(os.path.dirname(airplane_models.__file__),"/models/", self._type)
         with open(fileName) as f:
             self._spec = simplejson.load(f)
 
