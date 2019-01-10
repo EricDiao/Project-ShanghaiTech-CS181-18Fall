@@ -4,5 +4,5 @@ Source code for project of CS 181: Artifical Intellgence I in ShanghaiTech Unive
 
 ## Team member
 * Diao Zihao <hi@ericdiao.com>
-*
+* Hang Hu
 *
