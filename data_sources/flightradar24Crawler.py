@@ -40,10 +40,10 @@ def crawlFR24(border):
                 #print(result[item])
                 thisPlane = {}
                 if len(result[item]) >= 19:
-                    thisPlane['longtitude'] = result[item][1]
+                    thisPlane['longitude'] = result[item][1]
                     thisPlane['latitude'] = result[item][2]
                     thisPlane['heading'] = result[item][3]
-                    thisPlane['alititude'] = result[item][4]
+                    thisPlane['altitude'] = result[item][4]
                     thisPlane['groundSpeed'] = result[item][5]
                     thisPlane['squawk'] = result[item][6]
                     thisPlane['flightType'] = result[item][8]

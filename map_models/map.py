@@ -5,8 +5,9 @@
 # As I have not got the data of the map, I will not give proper data to the map, instead I will seperate data input and map building. 
 # So the map will not be biult in this commit, but the method and the requirements of data will be provided.
 # Note: It's a statistic map model, not containing time iteration.
-
-import airplane
+import sys
+sys.path.append("..")
+from airplane_models.airplane import baseAirplane
 from math import sin,cos,sqrt
 
 class controlTower():
@@ -46,14 +47,16 @@ class approachControlArea():
 	"""
 
 	def __init__(self, leftMost=None, rightMost=None, upperMost=None, lowerMost=None, \
-			lengthResolution=None, widthResolution=None, numRunway=None, runwayLocations=None, airportElevation=None, windDirections=None, mapData=None,):
+			lengthResolution=None, widthResolution=None, numRunway=2, \
+			runwayLocations=[[(30.563688,103.940061),(30.593320,103.953838)],[(30.519631,103.936683),(30.549429,103.950609)]],\
+			airportElevation=None, windDirections=None, mapData=None,):
 		self._numRunway = numRunway
 		self._numSpecArea = numRunway * 2
 		self._airportElevation = airportElevation
 		# Take airport's elevation as groud elevation.
 		self._map = []
 		# Inintialize a 3D array to specify the map (somehow like Minecraft) discretely, of where there is land and to make position judgment easier.
-		self._windDirections = None
+		self._windDirections = windDirections
 		# Wind flow is crucial in determining the direction of landing & takeoff, generally, takeoff and landing both go agaist the wind. For CTU, usually the  is 
 		self._leftMost = leftMost
 		self._rightMost = rightMost
@@ -65,14 +68,14 @@ class approachControlArea():
 		self._minHeight = 1000
 		# And airplane under 1000 meters would be taken over by control tower.
 		"***NOT DETERMINED!!!!***"
-		self._heightResolution = 500
-		self._widthResolution = 500
-		self._lengthResolution = 500 
+		self._heightResolution = 1000
+		self._widthResolution = widthResolution
+		self._lengthResolution = lengthResolution
 		# PENALTY: If a plane enter an occupied pixel, take it as crashed.
 		# Note: these 3 value have not been determined yet.
-		self._length = (cos(abs(self._upperMost) * 6371000 * abs(self._leftMost - self._rightMost)) // self.lengthResolution + 1
- 		self._width = (abs(self._upperMost - self._lowerMost) * 6371000) // self._widthResolution + 1
- 		self._height = (self._maxHeight - self._minHeight) // self._heightResolution + 1
+		self._length = int(abs(cos(abs(self._upperMost) * 6371000 * abs(self._leftMost - self._rightMost))) // self._lengthResolution + 1)
+ 		self._width = int(abs(self._upperMost - self._lowerMost) * 6371000) // self._widthResolution + 1
+ 		self._height = int(self._maxHeight - self._minHeight) // self._heightResolution + 1
  		# Pixel numbers of each direction
 		self._crashCounter = 0
 		self._mislandingCounter = 0
@@ -92,11 +95,13 @@ class approachControlArea():
 		self._runwayDirections = {}
 		# directions of runways
 		counter = 0
-		for runway in self._runwayLocations:
-			diffLeftToRight = (runway[0][0] - runway[1][0]) * cos(runway[0][1])
-			diffUpToDown = (runway[0][1] - runway[1][1])
-			self._runwayDirections[counter] = (diffUpToDown,diffLeftToRight)
-			counter += 1
+		if runwayLocations != None:
+			for runway in self._runwayLocations:
+				# diffLeftToRight = (runway[0][0] - runway[1][0]) * cos(runway[0][1])
+				# diffUpToDown = (runway[0][1] - runway[1][1])
+				# self._runwayDirections[counter] = (diffUpToDown,diffLeftToRight)
+				self._runwayDirections[counter] = (1,0)
+				counter += 1
 		# Computing runway directions
 		self._mapData = mapData
 		"""
@@ -107,30 +112,37 @@ class approachControlArea():
 										[[(2.1,0,5),1500],[...]]
 										  /     \       \ 
 								    longtitude latitude elevation(in meter)
-		Note: if more than one samples are in the same pixel on x-y plate, we take the highest piont as the height.
+		Note: if more than one samples are in the same pixel on x-y plate, we take the highest point as the height.
 		"""
 
 		# Generating map from the data we get from web.  
 		# Initially the map is contained with each pixiel together with a bool value True,which means all pixels are not occupied (neither by plane nor by land)
 		# Note: we take the lowerleft point as origin.
  		Status = "empty"
-		for i in range(self._length):
-			self._map.insert([])
-			for j in range(self._width):
-				self._map[i].insert([])
-				for k in range(self._height):
-					self._map[i][j].insert([Status])
-		# Then from mapData get the elevation info into the map.
-		for coordinate,elevation in mapData:
-			x = (abs(coordinate[0] - self._leftMost) * cos(coordinate[1]) * 6371000) // self._lengthResolution
-			y = (abs(coordinate[1] - self._lowerMost) * 6371000) // self._widthResolution
-			if elevation - self._minHeight - self._airportElevation > 0:
-				exceededHeight = elevation - self._minHeight - self._airportElevation
-				z = min(exceededHeight // self._heightResolution + 1,height)
-				for i in range(z):
-					self._map[x][y][i][0] = "occupied"
+ 		# print(self._length)
+ 		'''
+ 		This part is commented for atc.py to work, there are still missing data here.
+ 		'''
+		# for i in range(self._length):
+		# 	self._map.insert([])
+		# 	for j in range(self._width):
+		# 		self._map[i].insert([])
+		# 		for k in range(self._height):
+		# 			self._map[i][j].insert([Status])
+		# # Then from mapData get the elevation info into the map.
+		# for coordinate,elevation in mapData:
+		# 	x = (abs(coordinate[0] - self._leftMost) * cos(coordinate[1]) * 6371000) // self._lengthResolution
+		# 	y = (abs(coordinate[1] - self._lowerMost) * 6371000) // self._widthResolution
+		# 	if elevation - self._minHeight - self._airportElevation > 0:
+		# 		exceededHeight = elevation - self._minHeight - self._airportElevation
+		# 		z = min(exceededHeight // self._heightResolution + 1,height)
+		# 		for i in range(z):
+		# 			self._map[x][y][i][0] = "occupied"
 
 		# Next put the special areas into the map(areas where control tower takes over, usually 20000 meters from one end of the runway)
+		'''
+		This part is commented for atc.py to work, there are still missing data here.
+ 		'''
 		for r in range(self._numRunway):
 			firstEnd,secondEnd = self._runwayLocations[r]
 			x1 = abs(firstEnd[0] - self._leftMost) * cos(firstEnd[1]) * 6371000
@@ -164,41 +176,41 @@ class approachControlArea():
 					self._map[x2 + i][y2 + j][0].append(2)
 					# 1 stand for from south and west, 2 stand for from north and east
 
-	def notAbleToLand
+	# def notAbleToLand():
+	# 	pass
 
 	def getPlaneInfo(self,flightList):
-	"""
-	We get a sequence of flights info (a list of dictionaries) from input and put them in the map, once there's a error we will add a count to the penalty counter, and give an error.
-
-	If a plane successfully enter handover region, return its data in the same formation to make it possible to pass it to control tower
-	"""
-	for data in flightList:
-		plane = genericAirplane(data)
-		direction = plane.direction
-		departureCity = plane.departureCity
-		longtitude,latitude = plane.position
-		longtitude = longtitude * 3.14 / 180
-		latitude = latitude * 3.14 / 180
-		z = (plane.altitude - self._minHeight - self._airportElevation) // self._heightResolution + 1
-		x = y = -1
-		if longtitude > self._leftMost and longtitude < self._rightMost and latitude < self._upperMost and latitude > self._lowerMost:
-			x = (abs(longtitude - self._leftMost) * cos(latitude) * 6371000) // self._lengthResolution
-			y = (abs(latitude - self._lowerMost) * 6371000) // self._widthResolution
-		if x > 0 and y > 0:
-			if self._map[x][y][z][0] == "occupied":
-				# this plane crashed
-				self._crashCounter += 1
-			elif self._map[x][y][z][0] == "empty":
-				# safely add to the map
-				self._map[x][y][z][0] = "occupied"
-			elif self._map[x][y][z][0] == "handover":
-				if self._map[x][y][z][1] == "empty":
-					if departureCity == "CTU":
+		"""
+		We get a sequence of flights info (a list of dictionaries) from input and put them in the map, once there's a error we will add a count to the penalty counter, and give an error.
+		If a plane successfully enter handover region, return its data in the same formation to make it possible to pass it to control tower
+		"""
+		for data in flightList:
+			plane = genericAirplane(data)
+			direction = plane.direction
+			departureCity = plane.departureCity
+			longtitude,latitude = plane.position
+			longtitude = longtitude * 3.14 / 180
+			latitude = latitude * 3.14 / 180
+			z = (plane.altitude - self._minHeight - self._airportElevation) // self._heightResolution + 1
+			x = y = -1
+			if longtitude > self._leftMost and longtitude < self._rightMost and latitude < self._upperMost and latitude > self._lowerMost:
+				x = (abs(longtitude - self._leftMost) * cos(latitude) * 6371000) // self._lengthResolution
+				y = (abs(latitude - self._lowerMost) * 6371000) // self._widthResolution
+			if x > 0 and y > 0:
+				if self._map[x][y][z][0] == "occupied":
+					# this plane crashed
+					self._crashCounter += 1
+				elif self._map[x][y][z][0] == "empty":
+					# safely add to the map
+					self._map[x][y][z][0] = "occupied"
+				elif self._map[x][y][z][0] == "handover":
+					if self._map[x][y][z][1] == "empty":
+						if departureCity == "CTU":
+							pass
+						else:
+							pass
+					elif self._map[x][y][z][1] == "occupied":
 						pass
-					else:
-						pass
-				elif self._map[x][y][z][1] == "occupied":
-					pass
 
 	def emptyMap(self):
 		"""
