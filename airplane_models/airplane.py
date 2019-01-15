@@ -155,9 +155,11 @@ class genericAirplane(baseAirplane):
     and load it to self._spec.
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self, postion=(None, None), heading=None, **kwargs,):
         super().__init__(**kwargs)
         self._getSpecFromFile()
+        self.postion = postion
+        self.heading = heading
 
     def _getSpecFromFile(self):
         fileName = "{}{}{}.json".format(os.path.dirname(airplane_models.__file__),"/models/", self._type)
