@@ -134,7 +134,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
                 #     print('PossibleAction:',PossibleAction)
                 #     print('actions:',actions)
                 action = currentAgent.computeActionFromQValues(startState)
-                # action = random.choice(actions)
+                action = random.choice(actions)
                 # if(xxx == 1):
                 #     print(action)
                 endState = space.getNextState(startState,action)
