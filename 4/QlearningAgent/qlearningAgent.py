@@ -1,6 +1,6 @@
 import random, traceback, sys, os
 sys.path.append("..")
-from util import Counter, FixedRandom
+from util import Counter
 from airplane_models.airplane import baseAirplane
 from map_models.map import approachControlArea
 from math import sin,cos,sqrt,pi,acos,ceil
