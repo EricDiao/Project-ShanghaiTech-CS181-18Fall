@@ -287,6 +287,8 @@ class QLearningAgent:
         # print('actions:',actions)
         for action in actions:
             nextState = self.Map.getNextState(state,action)
+            reward = self.getReward(nextState)
+            self.update(state,action,nextState,reward)
             a = nextState
             position = self.Map.XYInDistToCoordinate([a[0][0],a[0][1]])
             z = int((a[0][2]-1000)//self.Map._heightResolution)
