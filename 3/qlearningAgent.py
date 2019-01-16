@@ -156,7 +156,7 @@ class QLearningAgent:
         - self.getPossibleActions(state)
           which returns legal actions for a state
     """
-    def __init__(self,plane,Map = None,actionFn = None, alpha=0.5, gamma=1,state = [0,0,0]):
+    def __init__(self,plane,Map = None,actionFn = None, alpha=0.8, gamma=0.5,state = [0,0,0]):
         "You can initialize Q-values here..."
         # if actionFn == None:
         #     actionFn = lambda state: state.getPossibleActions()
@@ -221,7 +221,7 @@ class QLearningAgent:
         position = self.Map.XYInDistToCoordinate([a[0][0],a[0][1]])
         z = int((a[0][2]-1000)//self.Map._heightResolution)
         # print(position,z)
-        rewardS = 30-(a[1][1] - 100)/5
+        rewardS = 8*(30-(a[1][1] - 100)/5)
         # print(x,y,z)
         cell = self.Map._map[position[0]][position[1]][z]
         rewardT = 0
