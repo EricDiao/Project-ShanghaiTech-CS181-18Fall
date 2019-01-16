@@ -156,7 +156,7 @@ class QLearningAgent:
         - self.getPossibleActions(state)
           which returns legal actions for a state
     """
-    def __init__(self,plane,Map = None,actionFn = None, alpha=0.5, gamma=1,state = [0,0,0]):
+    def __init__(self,plane,Map = None,actionFn = None, alpha=0.5, gamma=0.9,state = [0,0,0]):
         "You can initialize Q-values here..."
         # if actionFn == None:
         #     actionFn = lambda state: state.getPossibleActions()
