@@ -123,7 +123,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
             lastExperience = None
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
                 (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
-            for ccc in range(100000):
+            for ccc in range(2000):
                 currentAgent.computeValueFromQValues(startState)
                 PossibleAction = space.getPossibleActions(startState)
                 actions = []
