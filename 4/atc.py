@@ -37,7 +37,7 @@ def data_consumer(queue, interval, space):
 		# if it is a plane within altitude 1000-6000 and preparing to land at CTU, then we put it into plane list.
 		for i in planes:
 			# print(i)
-			if not space.plane.has_key(i['flight']):#(i['destination'] == "CTU") & 
+			if not i['flight'] in space.plane.keys():#(i['destination'] == "CTU") & 
 				if (i['altitude'] < 6000) & (i['altitude'] > 1000) :
 					plane = baseAirplane(i['flightType'],i['flight'],i['registration'],i['depature'],i['destination'],None,None,
 						i['heading'],i['longitude'],i['latitude'],i['altitude'],i['groundSpeed'],i['squawk'])
@@ -52,6 +52,7 @@ def data_consumer(queue, interval, space):
 			# states = space.getStates(num)
 			# print('end')
 			with open(str(i),'wb') as f:
+				# print('start')
 				new_data = space.getStates(i)
 				jsData = json.dumps(new_data,indent = 4)
 				f.write(jsData)

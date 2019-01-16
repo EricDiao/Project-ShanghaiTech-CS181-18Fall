@@ -36,7 +36,7 @@ class baseAirplane:
 		self._ETA = eta
 		self._ETD = etd
 		# Above two are in the UNIX timestamp format (We are CS student, right? And also we do not needs to deal with events before 1970-01-01 12:00, right?). e.g. (int) 15700000
-		self._spec = {"maxSpeed": 101, "ceiling": 1250}
+		self._spec = {"maxSpeed": 500, "ceiling": 6000}
 		# below are `dynamic` parameters that could change through time.
 		# self._heading = 0.0
 		self.heading = heading
