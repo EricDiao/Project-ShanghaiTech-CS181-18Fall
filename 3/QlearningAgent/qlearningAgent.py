@@ -160,7 +160,7 @@ class QLearningAgent:
         "You can initialize Q-values here..."
         # if actionFn == None:
         #     actionFn = lambda state: state.getPossibleActions()
-        self.runing = 0
+        self.running = 0
         self.actionFn = actionFn
         self.plane = plane
         self.Map = Map
