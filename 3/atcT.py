@@ -123,7 +123,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
             lastExperience = None
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
                 (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
-            for ccc in range(2000):
+            for ccc in range(1000):
                 currentAgent.computeValueFromQValues(startState)
                 PossibleAction = space.getPossibleActions(startState)
                 actions = []
@@ -151,6 +151,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
             (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
             currentAgent.running = 1
             action = currentAgent.computeActionFromQValues(startState)  
+            print('finalAction:',action)
             endState = space.getNextState(startState,action)
             space._map[currentAgent.X][currentAgent.Y][currentAgent.Z] = -100
             currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ = endState[0]
