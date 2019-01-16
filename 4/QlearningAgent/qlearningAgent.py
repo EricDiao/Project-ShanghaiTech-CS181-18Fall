@@ -100,9 +100,9 @@ class Map:
 		return int((alt-1000)//1000)
 	def getStates(self,num):
 		states = []
-		for i in range(self.x):
-			for j in range(self.y):
-				for k in range(self.z):
+		for i in range(0,len(self.x)):
+			for j in range(0,len(self.y)):
+				for k in range(0,len(self.z)):
 					states.append((i,j,k))
 		# States = list(combinations(states,num))
 		speed = [100,130,160,190,220,250]
