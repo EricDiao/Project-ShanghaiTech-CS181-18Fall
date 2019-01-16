@@ -95,6 +95,8 @@ class Map:
 		height = state[0][2]
 		speed = state[1][1]
 		heading = state[1][0]
+		if abs(heading) < 15:
+			heading = 0
 		if hAction == "L_30":
 			heading -= 30
 			if heading < 0:
