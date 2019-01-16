@@ -121,20 +121,20 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
             lastExperience = None
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
                 (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
-            for ccc in range(10000):
+            for ccc in range(1000):
                 currentAgent.computeValueFromQValues(startState)
                 PossibleAction = space.getPossibleActions(startState)
                 actions = []
                 for action in PossibleAction:
                     if (space.getPossibleActions(space.getNextState(startState,action)) != []):
                         actions.append(action)
-                if(xxx == 1):
-                    print('PossibleAction:',PossibleAction)
-                    print('actions:',actions)
+                # if(xxx == 1):
+                #     print('PossibleAction:',PossibleAction)
+                #     print('actions:',actions)
                 action = currentAgent.computeActionFromQValues(startState)
                 # action = random.choice(actions)
-                if(xxx == 1):
-                    print(action)
+                # if(xxx == 1):
+                #     print(action)
                 endState = space.getNextState(startState,action)
                 # print("endState:",endState)
                 reward = currentAgent.getReward(endState)
@@ -142,15 +142,16 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
                 currentAgent.update(*lastExperience)
                 startState = endState
                 tempX, tempY = space.XYInDistToCoordinate((endState[0][0],endState[0][1]))
-                if(xxx == 1):
-                    print('currentState:',tempX,tempY,endState[0][2],endState[1],ccc)
+                # if(xxx == 1):
+                #     print('currentState:',tempX,tempY,endState[0][2],endState[1],ccc)
+                print(ccc)
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
             (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
             action = currentAgent.computeActionFromQValues(startState)  
-            endState = currentAgent.getNextState(startState,action)
+            endState = space.getNextState(startState,action)
             space._map[currentAgent.X][currentAgent.Y][currentAgent.Z] = -100
             currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ = endState
-            currentAgent.X, currentAgent.Y = XYInDistToCoordinate((currentAgent.kmX,currentAgent.kmY))
+            currentAgent.X, currentAgent.Y = space.XYInDistToCoordinate((currentAgent.kmX,currentAgent.kmY))
             currentAgent.Z = currentAgent.kmZ
             allPlanesLocation[i] = endState[0]
             allPlanes[i]['groundSpeed'] = endState[1][1]
