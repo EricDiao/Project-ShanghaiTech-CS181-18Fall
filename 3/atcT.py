@@ -163,7 +163,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
             # Try to delete the plane once it is 20km from one head of the runway, but failed
             # since it 4am now, so there is no real time data for me to do the test
             # print()
-            print('me and end:',[currentAgent.X,currentAgent.Y,currentAgent.Z],list(space.runwayLocationCoordinate1)+[0],list(space.runwayLocationCoordinate2)+[0])
+            # print('me and end:',[currentAgent.X,currentAgent.Y,currentAgent.Z],list(space.runwayLocationCoordinate1)+[0],list(space.runwayLocationCoordinate2)+[0])
             if ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate1)+[0]):
                 print(i)
                 print('landed:',allPlanes.pop(i))
