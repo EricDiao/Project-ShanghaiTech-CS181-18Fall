@@ -45,12 +45,12 @@ def data_consumer(queue, interval, space):
                     positionZ = space.AltToZ(plane.altitude)
                     space.planeLocation[i['flight']] = [positionX,positionY,positionZ]
         length = [1,2,3,4,5,6,7,8,9,10]
-        for i in range(length):
+        for i in length:
             # print('start')
             # states = space.getStates(num)
             # print('end')
             with open(str(i),'wb') as f:
-                new_data =0
+                new_data = space.getStates(num)
                 jsData = json.dumps(new_data,indent = 4)
                 f.write(jsData)
                 f.write('\n')
