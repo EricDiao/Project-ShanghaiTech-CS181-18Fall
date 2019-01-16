@@ -103,13 +103,14 @@ class Map:
 		for i in range(self.x):
 			for j in range(self.y):
 				for k in range(self.z):
-					states.append([i,j,k])
-		States = list(combinations(states,num))
+					states.append((i,j,k))
+		# States = list(combinations(states,num))
 		speed = [100,130,160,190,220,250]
 		heading = [60,30,0,-30,-60]
 		Temp = list(product(heading,speed))
-		new = list(product(States,Temp))
-		return new
+		new = list(product(states,Temp))
+		States = list(combinations(new,num))
+		return States
 		# return States
 
 	def getLegalActions(self,state):

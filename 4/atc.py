@@ -48,6 +48,7 @@ def data_consumer(queue, interval, space):
 					space.planeLocation[i['flight']] = [positionX,positionY,positionZ]
 		length = [1,2,3,4,5,6,7,8,9,10]
 		for i in length:
+			print(str(i))
 			# print('start')
 			# states = space.getStates(num)
 			# print('end')
