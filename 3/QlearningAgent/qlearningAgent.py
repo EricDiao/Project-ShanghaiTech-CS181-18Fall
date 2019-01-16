@@ -156,7 +156,7 @@ class QLearningAgent:
         - self.getPossibleActions(state)
           which returns legal actions for a state
     """
-    def __init__(self,plane,Map = None,actionFn = None, alpha=0.5, gamma=0.95,state = [0,0,0]):
+    def __init__(self,plane,Map = None,actionFn = None, alpha=0.5, gamma=0.95,epsilon = 0.1):
         "You can initialize Q-values here..."
         # if actionFn == None:
         #     actionFn = lambda state: state.getPossibleActions()
@@ -168,7 +168,7 @@ class QLearningAgent:
         # self.accumTrainRewards = 0.0
         # self.accumTestRewards = 0.0
         # self.numTraining = int(numTraining)
-        # self.epsilon = float(epsilon)
+        self.epsilon = float(epsilon)
         self.alpha = float(alpha)
         self.discount = float(gamma)
         self.values = Counter()
@@ -327,8 +327,10 @@ class QLearningAgent:
             if actions == []:
                 return None
             return random.choice(actions)
-
-        return Action[Max.index(max(Max))]
+        if random.random() < self.epsilon:
+            return random.choice(Action)
+        else:
+            return Action[Max.index(max(Max))]
         util.raiseNotDefined()
 
         # return action
