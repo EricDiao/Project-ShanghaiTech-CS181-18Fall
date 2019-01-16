@@ -1,0 +1,11 @@
+{
+    "type": "A330",
+    "manufacturer": "Airbus",
+    "length": 37.57,
+    "wingSpan": 35.8,
+    "height":11.76,
+    "MTOW": 78,
+    "maxSpeed": 470,
+    "curiseSpeed": 477,
+    "ceiling": 12500
+}
