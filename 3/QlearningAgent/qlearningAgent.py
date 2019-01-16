@@ -160,6 +160,7 @@ class QLearningAgent:
         "You can initialize Q-values here..."
         # if actionFn == None:
         #     actionFn = lambda state: state.getPossibleActions()
+        self.runing = 0
         self.actionFn = actionFn
         self.plane = plane
         self.Map = Map
@@ -296,8 +297,10 @@ class QLearningAgent:
                 Action.append(action)
                 nextStates.append([nextState,self.Map._map[position[0]][position[1]][z]])
                 Max.append(self.getQValue(state,action)+self.Map._map[position[0]][position[1]][z])
-        print('action:',Action)
-        print('Max:',Max)
+        if self.running == 1:
+            print('action:',Action)
+            print('Max:',Max)
+            self.running = 0
 
         # for i in MainDict:
         #     # print(i[0],str(state))
