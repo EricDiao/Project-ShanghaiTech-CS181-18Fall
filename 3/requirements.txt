@@ -1,0 +1,2 @@
+simplejson>=3.16.0
+reuests>=2.19.1
