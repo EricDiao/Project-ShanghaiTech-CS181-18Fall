@@ -31,18 +31,6 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
         planes = list(data.values())
         planes = planes[0]
         planes = [{
-        "longitude": 30.4537,
-        "latitude": 103.7644,
-        "heading": 201,
-        "altitude": 6700,
-        "groundSpeed": 223,
-        "squawk": "5316",
-        "flightType": "A321",
-        "registration": "B-6386",
-        "depature": "CGQ",
-        "destination": "CTU",
-        "flight": "CA4190"},
-    {
         "longitude": 30.3495,
         "latitude": 103.7935,
         "heading": 112,
@@ -56,24 +44,24 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
         "flight": "8L9764"
     },
     {
-        "longitude": 30.5952,
-        "latitude": 103.8303,
-        "heading": 202,
-        "altitude": 8725,
-        "groundSpeed": 251,
-        "squawk": "7055",
-        "flightType": "A319",
-        "registration": "B-6047",
-        "depature": "INC",
+        "longitude": 30.3992,
+        "latitude": 103.881,
+        "heading": 21,
+        "altitude": 3725,
+        "groundSpeed": 173,
+        "squawk": "0000",
+        "flightType": "A320",
+        "registration": "B-6283",
+        "depature": "CSX",
         "destination": "CTU",
-        "flight": "CA4232"
+        "flight": "CZ3461"
     }]
         
         # states = filter(lambda state : len(space.getPossibleActions(state)) > 0,space.getStates())
         # states.sort()
         # if it is a plane within altitude 1000-6000 and preparing to land at CTU, then we put it into plane list.
         for i in planes:
-            # print(i)
+            print('i:',i)
             if not i['flight'] in allPlanes.keys():
                 if (i['destination'] == "CTU") & ((i['altitude']-space._airportElevation) < 6000) & ((i['altitude']-space._airportElevation) > 1000) :
                     # print(i['altitude'])
@@ -82,6 +70,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
                     allPlanes[i['flight']] = agent
                     #store the state of all plane as another dict for convenience
                     allPlanesLocation[i['flight']] = [agent.X,agent.Y,agent.Z]
+        print(allPlanes.keys())
                     # agent.stateReward = space._map[agent.X][agent.Y][agent.Z]
         # creat a temporary agent to do the training
         # tempAgent = QLearningAgent(baseAirplane(flightType="A330", flight="Ca1999",
