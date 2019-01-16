@@ -175,7 +175,6 @@ class QLearningAgent:
         # print(plane.position,plane.altitude)
         self.X ,self.Y = self.Map.XYInDistToCoordinate(self.Map.longLaToXYInDist(plane.position))
         self.Z = int((plane.altitude-1000)//self.Map._heightResolution)
-        self.state = state
         self.kmX,self.kmY = self.Map.longLaToXYInDist(plane.position)
         self.kmZ = plane.altitude
 
