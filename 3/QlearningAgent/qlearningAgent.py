@@ -222,7 +222,7 @@ class QLearningAgent:
         position = self.Map.XYInDistToCoordinate([a[0][0],a[0][1]])
         z = int((a[0][2]-1000)//self.Map._heightResolution)
         # print(position,z)
-        rewardS = 8*(20-(a[1][1] - 100)/5)
+        rewardS = (150-a[1][1])/5
         # print(x,y,z)
         cell = self.Map._map[position[0]][position[1]][z]
         rewardT = 0
