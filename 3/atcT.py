@@ -165,14 +165,18 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
             # print()
             print('me and end:',[currentAgent.X,currentAgent.Y,currentAgent.Z],list(space.runwayLocationCoordinate1)+[0],list(space.runwayLocationCoordinate2)+[0])
             if ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate1)+[0]):
+                print(i)
                 print('landed:',allPlanes.pop(i))
                 print('landed:',allPlanesLocation.pop(i))
-                space._map[endState[0][0]][endState[0][1]][0] = 20
+                print(allPlanes.keys())
+                space._map[currentAgent.X][currentAgent.Y][0] = 20
                 count[0] = 0
             if ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate2)+[0]):
+                print(i)
                 print('landed:',allPlanes.pop(i))
                 print('landed:',allPlanesLocation.pop(i))
-                space._map[endState[0][0]][endState[0][1]][0] = 20
+                print(allPlanes.keys())
+                space._map[currentAgent.X][currentAgent.Y][0] = 20
                 count[1] = 0
         for i in tempPlaneLocation.values():
             space._map[i[0]][i[1]][i[2]] = space.tempValue[str(i)]
