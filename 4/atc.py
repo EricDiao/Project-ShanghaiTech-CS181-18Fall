@@ -51,7 +51,7 @@ def data_consumer(queue, interval, space):
 			# print('start')
 			# states = space.getStates(num)
 			# print('end')
-			with open(str(i),'wb') as f:
+			with open(str(i),'w') as f:
 				# print('start')
 				new_data = space.getStates(i)
 				jsData = json.dumps(new_data,indent = 4)
