@@ -328,10 +328,10 @@ class QLearningAgent:
             if actions == []:
                 return None
             return random.choice(actions)
-        if random.random() < self.epsilon:
-            return random.choice(Action)
-        else:
-            return Action[Max.index(max(Max))]
+        # if random.random() < self.epsilon:
+        #     return random.choice(Action)
+        # else:
+        return Action[Max.index(max(Max))]
         util.raiseNotDefined()
 
         # return action
