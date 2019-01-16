@@ -74,9 +74,9 @@ class approachControlArea():
 		# PENALTY: If a plane enter an occupied pixel, take it as crashed.
 		# Note: these 3 value have not been determined yet.
 		self._length = int(abs(cos(abs(self._upperMost) * 6371000 * abs(self._leftMost - self._rightMost))) // self._lengthResolution + 1)
- 		self._width = int(abs(self._upperMost - self._lowerMost) * 6371000) // self._widthResolution + 1
- 		self._height = int(self._maxHeight - self._minHeight) // self._heightResolution + 1
- 		# Pixel numbers of each direction
+		self._width = int(abs(self._upperMost - self._lowerMost) * 6371000) // self._widthResolution + 1
+		self._height = int(self._maxHeight - self._minHeight) // self._heightResolution + 1
+		# Pixel numbers of each direction
 		self._crashCounter = 0
 		self._mislandingCounter = 0
 		# Penalty counters
@@ -84,10 +84,10 @@ class approachControlArea():
 		"""
 			This is the location of the head of the runway (a list contains tuples indicating loctions of the two end of a runway),
 			Sample: 
-			 								[[(2.11,0.62),(2.13,0.54)],[...]]
-			       	                           -----   -----   --------
-			                                    |        |        |
-			                              Southern    Northern    other runways(if any)
+											[[(2.11,0.62),(2.13,0.54)],[...]]
+											   -----   -----   --------
+												|        |        |
+										  Southern    Northern    other runways(if any)
 			From the runway we get a threshold region of where the planes should leave the approach control region.
 			Note: usually the control tower would 
 			PENALTY: When an airplane goes below 1000 meters outside a threshold region or heading to the wrong direction when leaving the threshold region, we take it as mislanding.
@@ -111,18 +111,18 @@ class approachControlArea():
 		Sample:
 										[[(2.1,0,5),1500],[...]]
 										  /     \       \ 
-								    longtitude latitude elevation(in meter)
+									longtitude latitude elevation(in meter)
 		Note: if more than one samples are in the same pixel on x-y plate, we take the highest point as the height.
 		"""
 
 		# Generating map from the data we get from web.  
 		# Initially the map is contained with each pixiel together with a bool value True,which means all pixels are not occupied (neither by plane nor by land)
 		# Note: we take the lowerleft point as origin.
- 		Status = "empty"
- 		# print(self._length)
- 		'''
- 		This part is commented for atc.py to work, there are still missing data here.
- 		'''
+		Status = "empty"
+		# print(self._length)
+		'''
+		This part is commented for atc.py to work, there are still missing data here.
+		'''
 		# for i in range(self._length):
 		# 	self._map.insert([])
 		# 	for j in range(self._width):
@@ -142,7 +142,7 @@ class approachControlArea():
 		# Next put the special areas into the map(areas where control tower takes over, usually 20000 meters from one end of the runway)
 		'''
 		This part is commented for atc.py to work, there are still missing data here.
- 		'''
+		'''
 		for r in range(self._numRunway):
 			firstEnd,secondEnd = self._runwayLocations[r]
 			x1 = abs(firstEnd[0] - self._leftMost) * cos(firstEnd[1]) * 6371000
