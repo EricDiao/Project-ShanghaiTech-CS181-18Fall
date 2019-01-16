@@ -296,8 +296,8 @@ class QLearningAgent:
                 Action.append(action)
                 nextStates.append([nextState,self.Map._map[position[0]][position[1]][z]])
                 Max.append(self.getQValue(state,action)+self.Map._map[position[0]][position[1]][z])
-        # print('action:',Action)
-        # print('Max:',Max)
+        print('action:',Action)
+        print('Max:',Max)
 
         # for i in MainDict:
         #     # print(i[0],str(state))
