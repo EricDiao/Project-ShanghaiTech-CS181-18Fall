@@ -28,8 +28,10 @@ def data_consumer(queue, interval, space):
 		# print("get data: ")#,end=''
 		# print(data)
 		# print("LeftMost:",space._leftMost)
-		timeStamp = data.keys()[0]
-		planes = data.values()[0]
+		timeStamp = list(data.keys())
+		timeStamp = timeStamp[0]
+		planes = list(data.values())
+		planes = planes[0]
 		
 		# states.sort()
 		# if it is a plane within altitude 1000-6000 and preparing to land at CTU, then we put it into plane list.
@@ -50,7 +52,7 @@ def data_consumer(queue, interval, space):
 			# states = space.getStates(num)
 			# print('end')
 			with open(str(i),'wb') as f:
-				new_data = space.getStates(num)
+				new_data = space.getStates(i)
 				jsData = json.dumps(new_data,indent = 4)
 				f.write(jsData)
 				f.write('\n')
