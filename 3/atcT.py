@@ -149,6 +149,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
                 # print(ccc)
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
             (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
+            currentAgent.running = 1
             action = currentAgent.computeActionFromQValues(startState)  
             endState = space.getNextState(startState,action)
             space._map[currentAgent.X][currentAgent.Y][currentAgent.Z] = -100
