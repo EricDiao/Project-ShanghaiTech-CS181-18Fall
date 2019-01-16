@@ -121,7 +121,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
             lastExperience = None
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
                 (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
-            for ccc in range(1000):
+            for ccc in range(2000):
                 currentAgent.computeValueFromQValues(startState)
                 PossibleAction = space.getPossibleActions(startState)
                 actions = []
@@ -144,18 +144,18 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation):
                 tempX, tempY = space.XYInDistToCoordinate((endState[0][0],endState[0][1]))
                 # if(xxx == 1):
                 #     print('currentState:',tempX,tempY,endState[0][2],endState[1],ccc)
-                print(ccc)
+                # print(ccc)
             startState = [(currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ),\
             (currentAgent.plane.heading,currentAgent.plane.groundSpeed)]
             action = currentAgent.computeActionFromQValues(startState)  
             endState = space.getNextState(startState,action)
             space._map[currentAgent.X][currentAgent.Y][currentAgent.Z] = -100
-            currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ = endState
+            currentAgent.kmX,currentAgent.kmY,currentAgent.kmZ = endState[0]
             currentAgent.X, currentAgent.Y = space.XYInDistToCoordinate((currentAgent.kmX,currentAgent.kmY))
-            currentAgent.Z = currentAgent.kmZ
-            allPlanesLocation[i] = endState[0]
-            allPlanes[i]['groundSpeed'] = endState[1][1]
-            allPlanes[i]['heading'] = endState[1][0]
+            currentAgent.Z = int((currentAgent.kmZ-1000)//space._heightResolution)
+            allPlanesLocation[i] = [currentAgent.X,currentAgent.Y,currentAgent.Z]
+            allPlanes[i].plane.groundSpeed = endState[1][1]
+            allPlanes[i].plane.heading = endState[1][0]
             print('plane&state:',i,endState)
             # TODO: find out what is wrong
             # Try to delete the plane once it is 20km from one head of the runway, but failed
