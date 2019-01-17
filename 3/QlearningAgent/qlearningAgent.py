@@ -172,6 +172,7 @@ class QLearningAgent:
         self.alpha = float(alpha)
         self.discount = float(gamma)
         self.values = Counter()
+        self.oldValues = Counter()
         # print(plane.position,plane.altitude)
         self.X ,self.Y = self.Map.XYInDistToCoordinate(self.Map.longLaToXYInDist(plane.position))
         self.Z = int((plane.altitude-1000)//self.Map._heightResolution)
@@ -205,7 +206,7 @@ class QLearningAgent:
         """
         "*** YOUR CODE HERE ***"
         # print(self.values.keys())
-        return self.values[(str(state),str(action))]
+        return self.oldValues[(str(state),str(action))]
         #state contains: (position_x, position_y, altitude, heading, speed]
         #action:(heading,speed, altitude)
         util.raiseNotDefined()
@@ -348,7 +349,7 @@ class QLearningAgent:
         "*** YOUR CODE HERE ***"
         # print(nextState)
         newSample = reward+ self.discount*self.computeValueFromQValues(nextState)
-        self.values[(str(state),str(action))] = (1-self.alpha)*self.values[(str(state),str(action))] + (self.alpha*newSample)
+        self.values[(str(state),str(action))] = (1-self.alpha)*self.oldValues[(str(state),str(action))] + (self.alpha*newSample)
         return newSample
         util.raiseNotDefined()
 
