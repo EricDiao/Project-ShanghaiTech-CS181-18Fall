@@ -8,7 +8,7 @@ from util import Counter
 
 class Map:
 	def __init__(self):
-		self._horizontalActions = ["L_60","L_30","R_60","R_30","S"]
+		self._horizontalActions = ["L_30","L_60","R_60","R_30","S"]
 		self._verticalActions = ["up","down","None"]
 		self._speedActions = [8,-8,0]
 		self._heightResolution = 300
@@ -95,7 +95,7 @@ class Map:
 		height = state[0][2]
 		speed = state[1][1]
 		heading = state[1][0]
-		if abs(heading) < 15:
+		if heading < 15 or heading > 345:
 			heading = 0
 		if hAction == "L_30":
 			heading -= 30
