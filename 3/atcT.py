@@ -10,6 +10,7 @@ from airplane_models.airplane import baseAirplane
 from map_models.newMap import Map
 from QlearningAgent.qlearningAgent import QLearningAgent
 import random
+import simplejson as json
 from util import Counter
 
 
@@ -31,32 +32,32 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count,visit
         timeStamp = timeStamp[0]
         planes = list(data.values())
         planes = planes[0]
-        planes = [{
-        "longitude": 30.3495,
-        "latitude": 103.7935,
-        "heading": 112,
-        "altitude": 5350,
-        "groundSpeed": 192,
-        "squawk": "6371",
-        "flightType": "A333",
-        "registration": "B-1059",
-        "depature": "TNA",
-        "destination": "CTU",
-        "flight": "8L9764"
-        },
-        {
-        "longitude": 30.3992,
-        "latitude": 103.881,
-        "heading": 21,
-        "altitude": 3725,
-        "groundSpeed": 173,
-        "squawk": "0000",
-        "flightType": "A320",
-        "registration": "B-6283",
-        "depature": "CSX",
-        "destination": "CTU",
-        "flight": "CZ3461"
-        }]
+        # planes = [{
+        # "longitude": 30.3495,
+        # "latitude": 103.7935,
+        # "heading": 112,
+        # "altitude": 5350,
+        # "groundSpeed": 192,
+        # "squawk": "6371",
+        # "flightType": "A333",
+        # "registration": "B-1059",
+        # "depature": "TNA",
+        # "destination": "CTU",
+        # "flight": "8L9764"
+        # },
+        # {
+        # "longitude": 30.3992,
+        # "latitude": 103.881,
+        # "heading": 21,
+        # "altitude": 3725,
+        # "groundSpeed": 173,
+        # "squawk": "0000",
+        # "flightType": "A320",
+        # "registration": "B-6283",
+        # "depature": "CSX",
+        # "destination": "CTU",
+        # "flight": "CZ3461"
+        # }]
 
         if count[0] < 6:
             count[0] += 1
@@ -84,6 +85,16 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count,visit
                     #store the state of all plane as another dict for convenience
                     allPlanesLocation[i['flight']] = [agent.X,agent.Y,agent.Z]
                     visited.append(i['flight'])
+                    f = open("data.json","a")
+                    newData = [i['flight'],agent.X,agent.Y,agent.Z]
+                    jsData = json.dumps(newData)
+                    f.write(jsData)
+                    f.write('\n')
+                    f.close()
+        f = open("data.json","a")
+        f.write('\n')
+        f.close()
+
         # print(allPlanes.keys())
                     # agent.stateReward = space._map[agent.X][agent.Y][agent.Z]
         # creat a temporary agent to do the training
@@ -171,6 +182,12 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count,visit
             # since it 4am now, so there is no real time data for me to do the test
             # print()
             # print('me and end:',[currentAgent.X,currentAgent.Y,currentAgent.Z],list(space.runwayLocationCoordinate1)+[0],list(space.runwayLocationCoordinate2)+[0])
+            f = open("data.json","a")
+            newData = [i,currentAgent.X,currentAgent.Y,currentAgent.Z]
+            jsData = json.dumps(newData)
+            f.write(jsData)
+            f.write('\n')
+            f.close()
             if ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate1)+[0]):
                 # print(i)
                 # print('landed:',allPlanes.pop(i))
@@ -222,6 +239,8 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count,visit
 
 
 if __name__ == "__main__":
+    with open("data.json","wb") as f:
+        f.close()
     logging.basicConfig(filename='atc.log',
                         format='%(levelname)s:%(asctime)s - %(message)s', level=logging.INFO)
     border = [(31.13, 102.28), (29.51, 102.28),
