@@ -152,14 +152,15 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count,visit
                 # action = random.choice(actions)
                 # if(xxx == 1):
                 #     print(action)
-                endState = space.getNextState(startState,action)
-                # print("endState:",endState)
-                reward = currentAgent.getReward(endState)
-                lastExperience = (startState, action, endState, reward)
-                currentAgent.update(*lastExperience)
-                startState = endState
-                tempX, tempY = space.XYInDistToCoordinate((endState[0][0],endState[0][1]))
-                currentAgent.oldValues = currentAgent.values.copy()
+                if len(action) != 0:
+                    endState = space.getNextState(startState,action)
+                    # print("endState:",endState)
+                    reward = currentAgent.getReward(endState)
+                    lastExperience = (startState, action, endState, reward)
+                    currentAgent.update(*lastExperience)
+                    startState = endState
+                    tempX, tempY = space.XYInDistToCoordinate((endState[0][0],endState[0][1]))
+                    currentAgent.oldValues = currentAgent.values.copy()
                 # if(xxx == 1):
                 #     print('currentState:',tempX,tempY,endState[0][2],endState[1],ccc)
                 # print(ccc)

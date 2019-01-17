@@ -4696,3 +4696,878 @@ INFO:2019-01-17 11:50:15,911 - Data consumer: get data with timestamp {}.
 INFO:2019-01-17 11:50:28,958 - crawlFR24: data got from flightradar24.
 INFO:2019-01-17 11:50:28,958 - Data provider: get data.
 INFO:2019-01-17 11:50:28,958 - Data provider: data put into data queue.
+INFO:2019-01-17 12:06:25,825 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:06:25,827 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:06:25,828 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:06:25,828 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:06:25,828 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:06:25,829 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:06:25,829 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:06:25,829 - ATC initialized.
+INFO:2019-01-17 12:07:29,240 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:07:29,242 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:07:29,242 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:07:29,242 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:07:29,243 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:07:29,244 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:07:29,244 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:07:29,244 - ATC initialized.
+INFO:2019-01-17 12:07:45,663 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:07:45,665 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:07:45,666 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:07:45,666 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:07:45,666 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:07:45,667 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:07:45,667 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:07:45,668 - ATC initialized.
+INFO:2019-01-17 12:07:47,966 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:07:47,967 - Data provider: get data.
+INFO:2019-01-17 12:07:47,968 - Data provider: data put into data queue.
+INFO:2019-01-17 12:07:47,969 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:08:04,689 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:08:04,690 - Data provider: get data.
+INFO:2019-01-17 12:08:04,690 - Data provider: data put into data queue.
+INFO:2019-01-17 12:08:21,415 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:08:21,415 - Data provider: get data.
+INFO:2019-01-17 12:08:21,415 - Data provider: data put into data queue.
+INFO:2019-01-17 12:08:38,231 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:08:38,232 - Data provider: get data.
+INFO:2019-01-17 12:08:38,232 - Data provider: data put into data queue.
+INFO:2019-01-17 12:08:46,254 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:08:54,988 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:08:54,989 - Data provider: get data.
+INFO:2019-01-17 12:08:54,989 - Data provider: data put into data queue.
+INFO:2019-01-17 12:09:18,262 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:09:18,263 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:09:18,264 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:09:18,264 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:09:18,264 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:09:18,265 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:09:18,265 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:09:18,265 - ATC initialized.
+INFO:2019-01-17 12:09:19,915 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:09:19,916 - Data provider: get data.
+INFO:2019-01-17 12:09:19,916 - Data provider: data put into data queue.
+INFO:2019-01-17 12:09:19,916 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:09:36,583 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:09:36,583 - Data provider: get data.
+INFO:2019-01-17 12:09:36,583 - Data provider: data put into data queue.
+INFO:2019-01-17 12:09:53,480 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:09:53,481 - Data provider: get data.
+INFO:2019-01-17 12:09:53,481 - Data provider: data put into data queue.
+INFO:2019-01-17 12:10:03,887 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:10:10,991 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:10:10,991 - Data provider: get data.
+INFO:2019-01-17 12:10:10,992 - Data provider: data put into data queue.
+INFO:2019-01-17 12:10:27,868 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:10:27,868 - Data provider: get data.
+INFO:2019-01-17 12:10:27,869 - Data provider: data put into data queue.
+INFO:2019-01-17 12:10:44,627 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:10:44,628 - Data provider: get data.
+INFO:2019-01-17 12:10:44,628 - Data provider: data put into data queue.
+INFO:2019-01-17 12:10:47,774 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:11:02,568 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:11:02,568 - Data provider: get data.
+INFO:2019-01-17 12:11:02,568 - Data provider: data put into data queue.
+INFO:2019-01-17 12:11:19,275 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:11:19,275 - Data provider: get data.
+INFO:2019-01-17 12:11:19,275 - Data provider: data put into data queue.
+INFO:2019-01-17 12:11:30,306 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:11:36,025 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:11:36,026 - Data provider: get data.
+INFO:2019-01-17 12:11:36,026 - Data provider: data put into data queue.
+INFO:2019-01-17 12:11:52,760 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:11:52,760 - Data provider: get data.
+INFO:2019-01-17 12:11:52,761 - Data provider: data put into data queue.
+INFO:2019-01-17 12:12:09,345 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:12:09,346 - Data provider: get data.
+INFO:2019-01-17 12:12:09,346 - Data provider: data put into data queue.
+INFO:2019-01-17 12:12:26,292 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:12:26,293 - Data provider: get data.
+INFO:2019-01-17 12:12:26,293 - Data provider: data put into data queue.
+INFO:2019-01-17 12:12:42,889 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:12:42,891 - Data provider: get data.
+INFO:2019-01-17 12:12:42,891 - Data provider: data put into data queue.
+INFO:2019-01-17 12:12:59,444 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:12:59,445 - Data provider: get data.
+INFO:2019-01-17 12:12:59,445 - Data provider: data put into data queue.
+INFO:2019-01-17 12:13:16,026 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:13:16,027 - Data provider: get data.
+INFO:2019-01-17 12:13:16,027 - Data provider: data put into data queue.
+INFO:2019-01-17 12:13:30,328 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:13:30,330 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:13:30,330 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:13:30,330 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:13:30,331 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:13:30,332 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:13:30,332 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:13:30,332 - ATC initialized.
+INFO:2019-01-17 12:13:31,890 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:13:31,890 - Data provider: get data.
+INFO:2019-01-17 12:13:31,891 - Data provider: data put into data queue.
+INFO:2019-01-17 12:13:31,891 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:13:48,878 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:13:48,879 - Data provider: get data.
+INFO:2019-01-17 12:13:48,879 - Data provider: data put into data queue.
+INFO:2019-01-17 12:14:14,638 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:32:50,679 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:32:50,681 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:32:50,681 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:32:50,682 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:32:50,682 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:32:50,683 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:32:50,683 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:32:50,684 - ATC initialized.
+INFO:2019-01-17 12:32:52,784 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:32:52,786 - Data provider: get data.
+INFO:2019-01-17 12:32:52,786 - Data provider: data put into data queue.
+INFO:2019-01-17 12:32:52,788 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:33:10,517 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:33:10,517 - Data provider: get data.
+INFO:2019-01-17 12:33:10,518 - Data provider: data put into data queue.
+INFO:2019-01-17 12:33:27,083 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:33:27,085 - Data provider: get data.
+INFO:2019-01-17 12:33:27,085 - Data provider: data put into data queue.
+INFO:2019-01-17 12:33:35,997 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:33:43,728 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:33:43,728 - Data provider: get data.
+INFO:2019-01-17 12:33:43,728 - Data provider: data put into data queue.
+INFO:2019-01-17 12:34:01,919 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:34:01,920 - Data provider: get data.
+INFO:2019-01-17 12:34:01,920 - Data provider: data put into data queue.
+INFO:2019-01-17 12:34:17,737 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:34:18,541 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:34:18,542 - Data provider: get data.
+INFO:2019-01-17 12:34:18,542 - Data provider: data put into data queue.
+INFO:2019-01-17 12:34:38,092 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:34:38,093 - Data provider: get data.
+INFO:2019-01-17 12:34:38,094 - Data provider: data put into data queue.
+INFO:2019-01-17 12:34:44,110 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:34:56,959 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:34:56,959 - Data provider: get data.
+INFO:2019-01-17 12:34:56,959 - Data provider: data put into data queue.
+INFO:2019-01-17 12:35:13,542 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:35:13,544 - Data provider: get data.
+INFO:2019-01-17 12:35:13,569 - Data provider: data put into data queue.
+INFO:2019-01-17 12:35:33,176 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:35:33,176 - Data provider: get data.
+INFO:2019-01-17 12:35:33,176 - Data provider: data put into data queue.
+INFO:2019-01-17 12:35:50,043 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:35:50,045 - Data provider: get data.
+INFO:2019-01-17 12:35:50,045 - Data provider: data put into data queue.
+INFO:2019-01-17 12:36:06,670 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:36:06,671 - Data provider: get data.
+INFO:2019-01-17 12:36:06,671 - Data provider: data put into data queue.
+INFO:2019-01-17 12:36:23,526 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:36:23,527 - Data provider: get data.
+INFO:2019-01-17 12:36:23,528 - Data provider: data put into data queue.
+INFO:2019-01-17 12:36:40,342 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:36:40,342 - Data provider: get data.
+INFO:2019-01-17 12:36:40,343 - Data provider: data put into data queue.
+INFO:2019-01-17 12:36:58,192 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:36:58,194 - Data provider: get data.
+INFO:2019-01-17 12:36:58,194 - Data provider: data put into data queue.
+INFO:2019-01-17 12:37:14,890 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:37:14,890 - Data provider: get data.
+INFO:2019-01-17 12:37:14,890 - Data provider: data put into data queue.
+INFO:2019-01-17 12:37:31,484 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:37:31,486 - Data provider: get data.
+INFO:2019-01-17 12:37:31,486 - Data provider: data put into data queue.
+INFO:2019-01-17 12:37:48,068 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:37:48,069 - Data provider: get data.
+INFO:2019-01-17 12:37:48,070 - Data provider: data put into data queue.
+INFO:2019-01-17 12:38:04,636 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:38:04,638 - Data provider: get data.
+INFO:2019-01-17 12:38:04,638 - Data provider: data put into data queue.
+INFO:2019-01-17 12:38:06,404 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:38:06,406 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:38:06,406 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:38:06,406 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:38:06,407 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:38:06,408 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:38:06,408 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:38:06,408 - ATC initialized.
+INFO:2019-01-17 12:38:09,534 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:38:09,534 - Data provider: get data.
+INFO:2019-01-17 12:38:09,534 - Data provider: data put into data queue.
+INFO:2019-01-17 12:38:09,535 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:38:26,217 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:38:26,218 - Data provider: get data.
+INFO:2019-01-17 12:38:26,218 - Data provider: data put into data queue.
+INFO:2019-01-17 12:38:43,345 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:38:43,347 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:38:43,347 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:38:43,347 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:38:43,348 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:38:43,349 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:38:43,349 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:38:43,349 - ATC initialized.
+INFO:2019-01-17 12:38:45,071 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:38:45,072 - Data provider: get data.
+INFO:2019-01-17 12:38:45,073 - Data provider: data put into data queue.
+INFO:2019-01-17 12:38:45,073 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:39:01,623 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:39:01,624 - Data provider: get data.
+INFO:2019-01-17 12:39:01,624 - Data provider: data put into data queue.
+INFO:2019-01-17 12:39:18,792 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:39:18,793 - Data provider: get data.
+INFO:2019-01-17 12:39:18,793 - Data provider: data put into data queue.
+INFO:2019-01-17 12:39:35,649 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:39:35,650 - Data provider: get data.
+INFO:2019-01-17 12:39:35,651 - Data provider: data put into data queue.
+INFO:2019-01-17 12:39:53,562 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:39:53,564 - Data provider: get data.
+INFO:2019-01-17 12:39:53,564 - Data provider: data put into data queue.
+INFO:2019-01-17 12:40:10,298 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:40:10,300 - Data provider: get data.
+INFO:2019-01-17 12:40:10,300 - Data provider: data put into data queue.
+INFO:2019-01-17 12:40:26,841 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:40:26,843 - Data provider: get data.
+INFO:2019-01-17 12:40:26,843 - Data provider: data put into data queue.
+INFO:2019-01-17 12:40:44,750 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:40:44,751 - Data provider: get data.
+INFO:2019-01-17 12:40:44,751 - Data provider: data put into data queue.
+INFO:2019-01-17 12:42:38,832 - Artifical Idiot ATC started.
+INFO:2019-01-17 12:42:38,834 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 12:42:38,834 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 12:42:38,834 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 12:42:38,835 - Mutiprocessing: data provider started.
+INFO:2019-01-17 12:42:38,836 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 12:42:38,836 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 12:42:38,836 - ATC initialized.
+INFO:2019-01-17 12:42:40,790 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:42:40,791 - Data provider: get data.
+INFO:2019-01-17 12:42:40,791 - Data provider: data put into data queue.
+INFO:2019-01-17 12:42:40,792 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:42:57,489 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:42:57,490 - Data provider: get data.
+INFO:2019-01-17 12:42:57,490 - Data provider: data put into data queue.
+INFO:2019-01-17 12:43:14,047 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:43:14,048 - Data provider: get data.
+INFO:2019-01-17 12:43:14,048 - Data provider: data put into data queue.
+INFO:2019-01-17 12:43:30,748 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:43:30,749 - Data provider: get data.
+INFO:2019-01-17 12:43:30,749 - Data provider: data put into data queue.
+INFO:2019-01-17 12:43:37,594 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:43:47,789 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:43:47,789 - Data provider: get data.
+INFO:2019-01-17 12:43:47,789 - Data provider: data put into data queue.
+INFO:2019-01-17 12:44:04,345 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:44:04,346 - Data provider: get data.
+INFO:2019-01-17 12:44:04,346 - Data provider: data put into data queue.
+INFO:2019-01-17 12:44:21,426 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:44:21,427 - Data provider: get data.
+INFO:2019-01-17 12:44:21,427 - Data provider: data put into data queue.
+INFO:2019-01-17 12:44:34,636 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:44:38,455 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:44:38,455 - Data provider: get data.
+INFO:2019-01-17 12:44:38,455 - Data provider: data put into data queue.
+INFO:2019-01-17 12:44:55,010 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:44:55,011 - Data provider: get data.
+INFO:2019-01-17 12:44:55,011 - Data provider: data put into data queue.
+INFO:2019-01-17 12:45:13,312 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:45:13,312 - Data provider: get data.
+INFO:2019-01-17 12:45:13,312 - Data provider: data put into data queue.
+INFO:2019-01-17 12:45:29,893 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:45:29,894 - Data provider: get data.
+INFO:2019-01-17 12:45:29,894 - Data provider: data put into data queue.
+INFO:2019-01-17 12:45:46,884 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:45:48,807 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:45:48,808 - Data provider: get data.
+INFO:2019-01-17 12:45:48,808 - Data provider: data put into data queue.
+INFO:2019-01-17 12:46:05,447 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:46:05,448 - Data provider: get data.
+INFO:2019-01-17 12:46:05,448 - Data provider: data put into data queue.
+INFO:2019-01-17 12:46:22,909 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:46:22,909 - Data provider: get data.
+INFO:2019-01-17 12:46:22,909 - Data provider: data put into data queue.
+INFO:2019-01-17 12:46:39,536 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:46:39,537 - Data provider: get data.
+INFO:2019-01-17 12:46:39,537 - Data provider: data put into data queue.
+INFO:2019-01-17 12:46:44,181 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:46:56,783 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:46:56,783 - Data provider: get data.
+INFO:2019-01-17 12:46:56,783 - Data provider: data put into data queue.
+INFO:2019-01-17 12:47:13,574 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:47:13,574 - Data provider: get data.
+INFO:2019-01-17 12:47:13,574 - Data provider: data put into data queue.
+INFO:2019-01-17 12:47:30,135 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:47:30,136 - Data provider: get data.
+INFO:2019-01-17 12:47:30,136 - Data provider: data put into data queue.
+INFO:2019-01-17 12:47:42,537 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:47:47,061 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:47:47,062 - Data provider: get data.
+INFO:2019-01-17 12:47:47,062 - Data provider: data put into data queue.
+INFO:2019-01-17 12:48:03,876 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:48:03,876 - Data provider: get data.
+INFO:2019-01-17 12:48:03,876 - Data provider: data put into data queue.
+INFO:2019-01-17 12:48:22,740 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:48:22,741 - Data provider: get data.
+INFO:2019-01-17 12:48:22,741 - Data provider: data put into data queue.
+INFO:2019-01-17 12:48:40,059 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:48:40,079 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:48:40,080 - Data provider: get data.
+INFO:2019-01-17 12:48:40,080 - Data provider: data put into data queue.
+INFO:2019-01-17 12:48:56,793 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:48:56,793 - Data provider: get data.
+INFO:2019-01-17 12:48:56,793 - Data provider: data put into data queue.
+INFO:2019-01-17 12:49:14,318 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:49:14,319 - Data provider: get data.
+INFO:2019-01-17 12:49:14,319 - Data provider: data put into data queue.
+INFO:2019-01-17 12:49:31,896 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:49:31,897 - Data provider: get data.
+INFO:2019-01-17 12:49:31,897 - Data provider: data put into data queue.
+INFO:2019-01-17 12:49:37,323 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:49:48,618 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:49:48,618 - Data provider: get data.
+INFO:2019-01-17 12:49:48,618 - Data provider: data put into data queue.
+INFO:2019-01-17 12:50:05,766 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:50:05,766 - Data provider: get data.
+INFO:2019-01-17 12:50:05,766 - Data provider: data put into data queue.
+INFO:2019-01-17 12:50:22,483 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:50:22,483 - Data provider: get data.
+INFO:2019-01-17 12:50:22,483 - Data provider: data put into data queue.
+INFO:2019-01-17 12:50:35,610 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:50:39,137 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:50:39,138 - Data provider: get data.
+INFO:2019-01-17 12:50:39,138 - Data provider: data put into data queue.
+INFO:2019-01-17 12:50:55,702 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:50:55,703 - Data provider: get data.
+INFO:2019-01-17 12:50:55,703 - Data provider: data put into data queue.
+INFO:2019-01-17 12:51:13,145 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:51:13,145 - Data provider: get data.
+INFO:2019-01-17 12:51:13,145 - Data provider: data put into data queue.
+INFO:2019-01-17 12:51:32,223 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:51:32,225 - Data provider: get data.
+INFO:2019-01-17 12:51:32,225 - Data provider: data put into data queue.
+INFO:2019-01-17 12:51:33,187 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 12:51:48,816 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:51:48,817 - Data provider: get data.
+INFO:2019-01-17 12:51:48,817 - Data provider: data put into data queue.
+INFO:2019-01-17 12:52:05,408 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:52:05,409 - Data provider: get data.
+INFO:2019-01-17 12:52:05,409 - Data provider: data put into data queue.
+INFO:2019-01-17 12:52:23,387 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:52:23,387 - Data provider: get data.
+INFO:2019-01-17 12:52:23,387 - Data provider: data put into data queue.
+INFO:2019-01-17 12:52:40,187 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:52:40,188 - Data provider: get data.
+INFO:2019-01-17 12:52:40,188 - Data provider: data put into data queue.
+INFO:2019-01-17 12:52:56,871 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:52:56,872 - Data provider: get data.
+INFO:2019-01-17 12:52:56,872 - Data provider: data put into data queue.
+INFO:2019-01-17 12:53:20,663 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:53:20,664 - Data provider: get data.
+INFO:2019-01-17 12:53:20,664 - Data provider: data put into data queue.
+INFO:2019-01-17 12:53:37,227 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:53:37,228 - Data provider: get data.
+INFO:2019-01-17 12:53:37,228 - Data provider: data put into data queue.
+INFO:2019-01-17 12:53:53,905 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:53:53,907 - Data provider: get data.
+INFO:2019-01-17 12:53:53,907 - Data provider: data put into data queue.
+INFO:2019-01-17 12:54:10,474 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:54:10,475 - Data provider: get data.
+INFO:2019-01-17 12:54:10,475 - Data provider: data put into data queue.
+INFO:2019-01-17 12:54:27,181 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:54:27,182 - Data provider: get data.
+INFO:2019-01-17 12:54:27,182 - Data provider: data put into data queue.
+INFO:2019-01-17 12:54:43,966 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:54:43,967 - Data provider: get data.
+INFO:2019-01-17 12:54:43,967 - Data provider: data put into data queue.
+INFO:2019-01-17 12:55:00,716 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:55:00,717 - Data provider: get data.
+INFO:2019-01-17 12:55:00,717 - Data provider: data put into data queue.
+INFO:2019-01-17 12:55:20,779 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:55:20,781 - Data provider: get data.
+INFO:2019-01-17 12:55:20,781 - Data provider: data put into data queue.
+INFO:2019-01-17 12:55:39,339 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:55:39,340 - Data provider: get data.
+INFO:2019-01-17 12:55:39,341 - Data provider: data put into data queue.
+INFO:2019-01-17 12:55:57,198 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:55:57,199 - Data provider: get data.
+INFO:2019-01-17 12:55:57,199 - Data provider: data put into data queue.
+INFO:2019-01-17 12:56:16,207 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:56:16,209 - Data provider: get data.
+INFO:2019-01-17 12:56:16,209 - Data provider: data put into data queue.
+INFO:2019-01-17 12:56:33,899 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:56:33,901 - Data provider: get data.
+INFO:2019-01-17 12:56:33,901 - Data provider: data put into data queue.
+INFO:2019-01-17 12:56:50,874 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:56:50,875 - Data provider: get data.
+INFO:2019-01-17 12:56:50,875 - Data provider: data put into data queue.
+INFO:2019-01-17 12:57:10,104 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:57:10,106 - Data provider: get data.
+INFO:2019-01-17 12:57:10,106 - Data provider: data put into data queue.
+INFO:2019-01-17 12:57:30,022 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:57:30,024 - Data provider: get data.
+INFO:2019-01-17 12:57:30,024 - Data provider: data put into data queue.
+INFO:2019-01-17 12:57:47,983 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:57:47,985 - Data provider: get data.
+INFO:2019-01-17 12:57:47,985 - Data provider: data put into data queue.
+INFO:2019-01-17 12:58:04,715 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:58:04,716 - Data provider: get data.
+INFO:2019-01-17 12:58:04,716 - Data provider: data put into data queue.
+INFO:2019-01-17 12:58:21,593 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:58:21,594 - Data provider: get data.
+INFO:2019-01-17 12:58:21,594 - Data provider: data put into data queue.
+INFO:2019-01-17 12:58:38,171 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:58:38,172 - Data provider: get data.
+INFO:2019-01-17 12:58:38,172 - Data provider: data put into data queue.
+INFO:2019-01-17 12:58:55,772 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:58:55,772 - Data provider: get data.
+INFO:2019-01-17 12:58:55,773 - Data provider: data put into data queue.
+INFO:2019-01-17 12:59:12,384 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:59:12,385 - Data provider: get data.
+INFO:2019-01-17 12:59:12,385 - Data provider: data put into data queue.
+INFO:2019-01-17 12:59:33,365 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:59:33,366 - Data provider: get data.
+INFO:2019-01-17 12:59:33,367 - Data provider: data put into data queue.
+INFO:2019-01-17 12:59:50,549 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 12:59:50,551 - Data provider: get data.
+INFO:2019-01-17 12:59:50,551 - Data provider: data put into data queue.
+INFO:2019-01-17 13:00:09,013 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:00:09,015 - Data provider: get data.
+INFO:2019-01-17 13:00:09,015 - Data provider: data put into data queue.
+INFO:2019-01-17 13:00:26,056 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:00:26,057 - Data provider: get data.
+INFO:2019-01-17 13:00:26,057 - Data provider: data put into data queue.
+INFO:2019-01-17 13:00:44,101 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:00:44,103 - Data provider: get data.
+INFO:2019-01-17 13:00:44,103 - Data provider: data put into data queue.
+INFO:2019-01-17 13:01:00,600 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:01:00,601 - Data provider: get data.
+INFO:2019-01-17 13:01:00,601 - Data provider: data put into data queue.
+INFO:2019-01-17 13:01:16,850 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:01:16,851 - Data provider: get data.
+INFO:2019-01-17 13:01:16,851 - Data provider: data put into data queue.
+INFO:2019-01-17 13:01:33,396 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:01:33,397 - Data provider: get data.
+INFO:2019-01-17 13:01:33,397 - Data provider: data put into data queue.
+INFO:2019-01-17 13:01:49,691 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:01:49,692 - Data provider: get data.
+INFO:2019-01-17 13:01:49,692 - Data provider: data put into data queue.
+INFO:2019-01-17 13:02:05,895 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:02:05,896 - Data provider: get data.
+INFO:2019-01-17 13:02:05,896 - Data provider: data put into data queue.
+INFO:2019-01-17 13:02:22,235 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:02:22,237 - Data provider: get data.
+INFO:2019-01-17 13:02:22,237 - Data provider: data put into data queue.
+INFO:2019-01-17 13:02:38,743 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:02:38,744 - Data provider: get data.
+INFO:2019-01-17 13:02:38,744 - Data provider: data put into data queue.
+INFO:2019-01-17 13:02:54,972 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:02:54,973 - Data provider: get data.
+INFO:2019-01-17 13:02:54,973 - Data provider: data put into data queue.
+INFO:2019-01-17 13:03:11,438 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:03:11,438 - Data provider: get data.
+INFO:2019-01-17 13:03:11,438 - Data provider: data put into data queue.
+INFO:2019-01-17 13:03:27,777 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:03:27,778 - Data provider: get data.
+INFO:2019-01-17 13:03:27,778 - Data provider: data put into data queue.
+INFO:2019-01-17 13:03:44,474 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:03:44,476 - Data provider: get data.
+INFO:2019-01-17 13:03:44,476 - Data provider: data put into data queue.
+INFO:2019-01-17 13:04:00,811 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:04:00,813 - Data provider: get data.
+INFO:2019-01-17 13:04:00,813 - Data provider: data put into data queue.
+INFO:2019-01-17 13:04:17,239 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:04:17,240 - Data provider: get data.
+INFO:2019-01-17 13:04:17,240 - Data provider: data put into data queue.
+INFO:2019-01-17 13:04:33,654 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:04:33,655 - Data provider: get data.
+INFO:2019-01-17 13:04:33,655 - Data provider: data put into data queue.
+INFO:2019-01-17 13:04:52,976 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:04:52,977 - Data provider: get data.
+INFO:2019-01-17 13:04:52,977 - Data provider: data put into data queue.
+INFO:2019-01-17 13:05:09,444 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:05:09,446 - Data provider: get data.
+INFO:2019-01-17 13:05:09,446 - Data provider: data put into data queue.
+INFO:2019-01-17 13:05:26,031 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:05:26,032 - Data provider: get data.
+INFO:2019-01-17 13:05:26,032 - Data provider: data put into data queue.
+INFO:2019-01-17 13:05:42,609 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:05:42,611 - Data provider: get data.
+INFO:2019-01-17 13:05:42,611 - Data provider: data put into data queue.
+INFO:2019-01-17 13:05:59,019 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:05:59,021 - Data provider: get data.
+INFO:2019-01-17 13:05:59,021 - Data provider: data put into data queue.
+INFO:2019-01-17 13:06:15,544 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:06:15,545 - Data provider: get data.
+INFO:2019-01-17 13:06:15,545 - Data provider: data put into data queue.
+INFO:2019-01-17 13:06:31,803 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:06:31,805 - Data provider: get data.
+INFO:2019-01-17 13:06:31,806 - Data provider: data put into data queue.
+INFO:2019-01-17 13:06:48,161 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:06:48,161 - Data provider: get data.
+INFO:2019-01-17 13:06:48,161 - Data provider: data put into data queue.
+INFO:2019-01-17 13:07:07,581 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:07:07,582 - Data provider: get data.
+INFO:2019-01-17 13:07:07,582 - Data provider: data put into data queue.
+INFO:2019-01-17 13:07:24,022 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:07:24,023 - Data provider: get data.
+INFO:2019-01-17 13:07:24,023 - Data provider: data put into data queue.
+INFO:2019-01-17 13:07:40,701 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:07:40,703 - Data provider: get data.
+INFO:2019-01-17 13:07:40,703 - Data provider: data put into data queue.
+INFO:2019-01-17 13:07:57,275 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:07:57,275 - Data provider: get data.
+INFO:2019-01-17 13:07:57,275 - Data provider: data put into data queue.
+INFO:2019-01-17 13:08:13,646 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:08:13,647 - Data provider: get data.
+INFO:2019-01-17 13:08:13,647 - Data provider: data put into data queue.
+INFO:2019-01-17 13:08:29,937 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:08:29,937 - Data provider: get data.
+INFO:2019-01-17 13:08:29,938 - Data provider: data put into data queue.
+INFO:2019-01-17 13:08:46,347 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:08:46,347 - Data provider: get data.
+INFO:2019-01-17 13:08:46,348 - Data provider: data put into data queue.
+INFO:2019-01-17 13:09:02,835 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:09:02,836 - Data provider: get data.
+INFO:2019-01-17 13:09:02,836 - Data provider: data put into data queue.
+INFO:2019-01-17 13:09:19,343 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:09:19,345 - Data provider: get data.
+INFO:2019-01-17 13:09:19,346 - Data provider: data put into data queue.
+INFO:2019-01-17 13:09:35,633 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:09:35,634 - Data provider: get data.
+INFO:2019-01-17 13:09:35,634 - Data provider: data put into data queue.
+INFO:2019-01-17 13:09:52,050 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:09:52,051 - Data provider: get data.
+INFO:2019-01-17 13:09:52,052 - Data provider: data put into data queue.
+INFO:2019-01-17 13:10:08,507 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:10:08,508 - Data provider: get data.
+INFO:2019-01-17 13:10:08,508 - Data provider: data put into data queue.
+INFO:2019-01-17 13:10:24,924 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:10:24,925 - Data provider: get data.
+INFO:2019-01-17 13:10:24,925 - Data provider: data put into data queue.
+INFO:2019-01-17 13:10:41,274 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:10:41,275 - Data provider: get data.
+INFO:2019-01-17 13:10:41,275 - Data provider: data put into data queue.
+INFO:2019-01-17 13:10:57,569 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:10:57,570 - Data provider: get data.
+INFO:2019-01-17 13:10:57,570 - Data provider: data put into data queue.
+INFO:2019-01-17 13:11:13,925 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:11:13,926 - Data provider: get data.
+INFO:2019-01-17 13:11:13,926 - Data provider: data put into data queue.
+INFO:2019-01-17 13:11:33,266 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:11:33,267 - Data provider: get data.
+INFO:2019-01-17 13:11:33,268 - Data provider: data put into data queue.
+INFO:2019-01-17 13:11:49,712 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:11:49,713 - Data provider: get data.
+INFO:2019-01-17 13:11:49,713 - Data provider: data put into data queue.
+INFO:2019-01-17 13:12:06,153 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:12:06,155 - Data provider: get data.
+INFO:2019-01-17 13:12:06,155 - Data provider: data put into data queue.
+INFO:2019-01-17 13:12:22,520 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:12:22,522 - Data provider: get data.
+INFO:2019-01-17 13:12:22,522 - Data provider: data put into data queue.
+INFO:2019-01-17 13:12:38,753 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:12:38,754 - Data provider: get data.
+INFO:2019-01-17 13:12:38,754 - Data provider: data put into data queue.
+INFO:2019-01-17 13:12:55,185 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:12:55,186 - Data provider: get data.
+INFO:2019-01-17 13:12:55,186 - Data provider: data put into data queue.
+INFO:2019-01-17 13:13:11,570 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:13:11,572 - Data provider: get data.
+INFO:2019-01-17 13:13:11,572 - Data provider: data put into data queue.
+INFO:2019-01-17 13:13:28,088 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:13:28,089 - Data provider: get data.
+INFO:2019-01-17 13:13:28,089 - Data provider: data put into data queue.
+INFO:2019-01-17 13:13:44,364 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:13:44,365 - Data provider: get data.
+INFO:2019-01-17 13:13:44,365 - Data provider: data put into data queue.
+INFO:2019-01-17 13:14:01,066 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:14:01,067 - Data provider: get data.
+INFO:2019-01-17 13:14:01,067 - Data provider: data put into data queue.
+INFO:2019-01-17 13:14:17,398 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 13:14:17,399 - Data provider: get data.
+INFO:2019-01-17 13:14:17,399 - Data provider: data put into data queue.
+INFO:2019-01-17 14:21:47,706 - Artifical Idiot ATC started.
+INFO:2019-01-17 14:21:47,708 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 14:21:47,708 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 14:21:47,708 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 14:21:47,709 - Mutiprocessing: data provider started.
+INFO:2019-01-17 14:21:47,709 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 14:21:47,710 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 14:21:47,710 - ATC initialized.
+INFO:2019-01-17 14:21:52,944 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:21:52,945 - Data provider: get data.
+INFO:2019-01-17 14:21:52,945 - Data provider: data put into data queue.
+INFO:2019-01-17 14:21:52,946 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:22:09,477 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:22:09,478 - Data provider: get data.
+INFO:2019-01-17 14:22:09,478 - Data provider: data put into data queue.
+INFO:2019-01-17 14:22:09,478 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:22:26,027 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:22:26,028 - Data provider: get data.
+INFO:2019-01-17 14:22:26,029 - Data provider: data put into data queue.
+INFO:2019-01-17 14:22:26,029 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:22:42,363 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:22:42,364 - Data provider: get data.
+INFO:2019-01-17 14:22:42,364 - Data provider: data put into data queue.
+INFO:2019-01-17 14:22:42,365 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:22:58,793 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:22:58,795 - Data provider: get data.
+INFO:2019-01-17 14:22:58,795 - Data provider: data put into data queue.
+INFO:2019-01-17 14:22:58,795 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:23:15,180 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:23:15,181 - Data provider: get data.
+INFO:2019-01-17 14:23:15,182 - Data provider: data put into data queue.
+INFO:2019-01-17 14:23:15,182 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:23:31,571 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:23:31,573 - Data provider: get data.
+INFO:2019-01-17 14:23:31,573 - Data provider: data put into data queue.
+INFO:2019-01-17 14:23:31,573 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:23:48,070 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:23:48,071 - Data provider: get data.
+INFO:2019-01-17 14:23:48,071 - Data provider: data put into data queue.
+INFO:2019-01-17 14:23:58,328 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:24:04,493 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:24:04,493 - Data provider: get data.
+INFO:2019-01-17 14:24:04,493 - Data provider: data put into data queue.
+INFO:2019-01-17 14:24:20,972 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:24:20,974 - Data provider: get data.
+INFO:2019-01-17 14:24:20,974 - Data provider: data put into data queue.
+INFO:2019-01-17 14:24:25,179 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:24:37,145 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:24:37,146 - Data provider: get data.
+INFO:2019-01-17 14:24:37,146 - Data provider: data put into data queue.
+INFO:2019-01-17 14:24:52,473 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:24:53,351 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:24:53,351 - Data provider: get data.
+INFO:2019-01-17 14:24:53,351 - Data provider: data put into data queue.
+INFO:2019-01-17 14:25:09,684 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:25:09,685 - Data provider: get data.
+INFO:2019-01-17 14:25:09,685 - Data provider: data put into data queue.
+INFO:2019-01-17 14:25:19,104 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:25:25,959 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:25:25,959 - Data provider: get data.
+INFO:2019-01-17 14:25:25,959 - Data provider: data put into data queue.
+INFO:2019-01-17 14:25:42,315 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:25:42,316 - Data provider: get data.
+INFO:2019-01-17 14:25:42,317 - Data provider: data put into data queue.
+INFO:2019-01-17 14:25:45,357 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:25:58,830 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:25:58,831 - Data provider: get data.
+INFO:2019-01-17 14:25:58,831 - Data provider: data put into data queue.
+INFO:2019-01-17 14:26:11,642 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:26:15,346 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:26:15,347 - Data provider: get data.
+INFO:2019-01-17 14:26:15,347 - Data provider: data put into data queue.
+INFO:2019-01-17 14:26:21,653 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:26:31,635 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:26:31,635 - Data provider: get data.
+INFO:2019-01-17 14:26:31,635 - Data provider: data put into data queue.
+INFO:2019-01-17 14:26:48,080 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:26:48,080 - Data provider: get data.
+INFO:2019-01-17 14:26:48,080 - Data provider: data put into data queue.
+INFO:2019-01-17 14:26:48,382 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:27:04,320 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:27:04,320 - Data provider: get data.
+INFO:2019-01-17 14:27:04,320 - Data provider: data put into data queue.
+INFO:2019-01-17 14:27:15,093 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:27:20,583 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:27:20,584 - Data provider: get data.
+INFO:2019-01-17 14:27:20,584 - Data provider: data put into data queue.
+INFO:2019-01-17 14:27:37,162 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:27:37,163 - Data provider: get data.
+INFO:2019-01-17 14:27:37,163 - Data provider: data put into data queue.
+INFO:2019-01-17 14:27:41,750 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:27:53,333 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 14:27:53,334 - Data provider: get data.
+INFO:2019-01-17 14:27:53,334 - Data provider: data put into data queue.
+INFO:2019-01-17 14:28:08,390 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:28:35,064 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:29:00,255 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:29:10,266 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:29:20,277 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 14:29:30,279 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:19:01,472 - Artifical Idiot ATC started.
+INFO:2019-01-17 15:19:01,473 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 15:19:01,474 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 15:19:01,474 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 15:19:01,474 - Mutiprocessing: data provider started.
+INFO:2019-01-17 15:19:01,475 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 15:19:01,475 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 15:19:01,475 - ATC initialized.
+INFO:2019-01-17 15:19:13,935 - Artifical Idiot ATC started.
+INFO:2019-01-17 15:19:13,936 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 15:19:13,937 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 15:19:13,937 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 15:19:13,937 - Mutiprocessing: data provider started.
+INFO:2019-01-17 15:19:13,938 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 15:19:13,938 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 15:19:13,938 - ATC initialized.
+INFO:2019-01-17 15:19:15,198 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:19:15,198 - Data provider: get data.
+INFO:2019-01-17 15:19:15,198 - Data provider: data put into data queue.
+INFO:2019-01-17 15:19:15,199 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:19:31,403 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:19:31,404 - Data provider: get data.
+INFO:2019-01-17 15:19:31,404 - Data provider: data put into data queue.
+INFO:2019-01-17 15:19:47,681 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:19:47,682 - Data provider: get data.
+INFO:2019-01-17 15:19:47,682 - Data provider: data put into data queue.
+INFO:2019-01-17 15:19:59,651 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:20:08,946 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:20:08,946 - Data provider: get data.
+INFO:2019-01-17 15:20:08,946 - Data provider: data put into data queue.
+INFO:2019-01-17 15:20:25,508 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:20:25,508 - Data provider: get data.
+INFO:2019-01-17 15:20:25,508 - Data provider: data put into data queue.
+INFO:2019-01-17 15:20:41,748 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:20:41,748 - Data provider: get data.
+INFO:2019-01-17 15:20:41,749 - Data provider: data put into data queue.
+INFO:2019-01-17 15:20:42,785 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:20:58,113 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:20:58,113 - Data provider: get data.
+INFO:2019-01-17 15:20:58,113 - Data provider: data put into data queue.
+INFO:2019-01-17 15:21:14,242 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:21:14,242 - Data provider: get data.
+INFO:2019-01-17 15:21:14,242 - Data provider: data put into data queue.
+INFO:2019-01-17 15:21:25,766 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:21:30,560 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:21:30,561 - Data provider: get data.
+INFO:2019-01-17 15:21:30,561 - Data provider: data put into data queue.
+INFO:2019-01-17 15:21:47,088 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:21:47,089 - Data provider: get data.
+INFO:2019-01-17 15:21:47,089 - Data provider: data put into data queue.
+INFO:2019-01-17 15:22:03,272 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:22:03,273 - Data provider: get data.
+INFO:2019-01-17 15:22:03,273 - Data provider: data put into data queue.
+INFO:2019-01-17 15:22:08,447 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:22:19,704 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:22:19,704 - Data provider: get data.
+INFO:2019-01-17 15:22:19,704 - Data provider: data put into data queue.
+INFO:2019-01-17 15:22:35,960 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:22:35,961 - Data provider: get data.
+INFO:2019-01-17 15:22:35,961 - Data provider: data put into data queue.
+INFO:2019-01-17 15:22:50,828 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:22:52,484 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:22:52,484 - Data provider: get data.
+INFO:2019-01-17 15:22:52,484 - Data provider: data put into data queue.
+INFO:2019-01-17 15:23:08,693 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:23:08,694 - Data provider: get data.
+INFO:2019-01-17 15:23:08,694 - Data provider: data put into data queue.
+INFO:2019-01-17 15:23:17,382 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:23:25,152 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:23:25,153 - Data provider: get data.
+INFO:2019-01-17 15:23:25,153 - Data provider: data put into data queue.
+INFO:2019-01-17 15:23:41,359 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:23:41,360 - Data provider: get data.
+INFO:2019-01-17 15:23:41,360 - Data provider: data put into data queue.
+INFO:2019-01-17 15:23:44,037 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:23:57,670 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:23:57,670 - Data provider: get data.
+INFO:2019-01-17 15:23:57,670 - Data provider: data put into data queue.
+INFO:2019-01-17 15:24:10,719 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:24:14,071 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:24:14,072 - Data provider: get data.
+INFO:2019-01-17 15:24:14,072 - Data provider: data put into data queue.
+INFO:2019-01-17 15:24:30,468 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:24:30,469 - Data provider: get data.
+INFO:2019-01-17 15:24:30,469 - Data provider: data put into data queue.
+INFO:2019-01-17 15:24:37,243 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:24:46,752 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:24:46,753 - Data provider: get data.
+INFO:2019-01-17 15:24:46,753 - Data provider: data put into data queue.
+INFO:2019-01-17 15:25:02,979 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:25:02,980 - Data provider: get data.
+INFO:2019-01-17 15:25:02,980 - Data provider: data put into data queue.
+INFO:2019-01-17 15:25:03,860 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:25:19,235 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:25:19,236 - Data provider: get data.
+INFO:2019-01-17 15:25:19,236 - Data provider: data put into data queue.
+INFO:2019-01-17 15:25:30,348 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:25:35,671 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:25:35,671 - Data provider: get data.
+INFO:2019-01-17 15:25:35,671 - Data provider: data put into data queue.
+INFO:2019-01-17 15:25:52,048 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:25:52,049 - Data provider: get data.
+INFO:2019-01-17 15:25:52,049 - Data provider: data put into data queue.
+INFO:2019-01-17 15:25:55,491 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:05,502 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:08,484 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:26:08,485 - Data provider: get data.
+INFO:2019-01-17 15:26:08,485 - Data provider: data put into data queue.
+INFO:2019-01-17 15:26:15,513 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:24,711 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:26:24,712 - Data provider: get data.
+INFO:2019-01-17 15:26:24,712 - Data provider: data put into data queue.
+INFO:2019-01-17 15:26:25,524 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:35,535 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:40,983 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:26:40,984 - Data provider: get data.
+INFO:2019-01-17 15:26:40,984 - Data provider: data put into data queue.
+INFO:2019-01-17 15:26:45,546 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:55,557 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:26:57,275 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:26:57,276 - Data provider: get data.
+INFO:2019-01-17 15:26:57,276 - Data provider: data put into data queue.
+INFO:2019-01-17 15:27:05,568 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:27:13,628 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:27:13,629 - Data provider: get data.
+INFO:2019-01-17 15:27:13,630 - Data provider: data put into data queue.
+INFO:2019-01-17 15:27:15,579 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:27:25,590 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:27:30,018 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:27:30,020 - Data provider: get data.
+INFO:2019-01-17 15:27:30,020 - Data provider: data put into data queue.
+INFO:2019-01-17 15:27:35,601 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:27:45,613 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:27:46,555 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:27:46,556 - Data provider: get data.
+INFO:2019-01-17 15:27:46,557 - Data provider: data put into data queue.
+INFO:2019-01-17 15:27:55,624 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:28:03,270 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:28:03,271 - Data provider: get data.
+INFO:2019-01-17 15:28:03,271 - Data provider: data put into data queue.
+INFO:2019-01-17 15:28:05,634 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:28:19,566 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:28:19,566 - Data provider: get data.
+INFO:2019-01-17 15:28:19,566 - Data provider: data put into data queue.
+INFO:2019-01-17 15:28:35,900 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:28:35,901 - Data provider: get data.
+INFO:2019-01-17 15:28:35,901 - Data provider: data put into data queue.
+INFO:2019-01-17 15:28:52,420 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:28:52,420 - Data provider: get data.
+INFO:2019-01-17 15:28:52,420 - Data provider: data put into data queue.
+INFO:2019-01-17 15:36:22,134 - Artifical Idiot ATC started.
+INFO:2019-01-17 15:36:22,136 - Mutiprocessing: data queue initialized.
+INFO:2019-01-17 15:36:22,137 - Mutiprocessing: data consumer initialized.
+INFO:2019-01-17 15:36:22,137 - Mutiprocessing: data provider initialized.
+INFO:2019-01-17 15:36:22,137 - Mutiprocessing: data provider started.
+INFO:2019-01-17 15:36:22,138 - Data provider: initialized with border [(31.13, 102.28), (29.51, 102.28), (31.13, 106.22), (29.51, 106.22)], interval 15
+INFO:2019-01-17 15:36:22,138 - Mutiprocessing: data consumer started.
+INFO:2019-01-17 15:36:22,138 - ATC initialized.
+INFO:2019-01-17 15:36:23,771 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:36:23,772 - Data provider: get data.
+INFO:2019-01-17 15:36:23,772 - Data provider: data put into data queue.
+INFO:2019-01-17 15:36:23,772 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:36:40,025 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:36:40,025 - Data provider: get data.
+INFO:2019-01-17 15:36:40,025 - Data provider: data put into data queue.
+INFO:2019-01-17 15:36:50,241 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:36:56,367 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:36:56,367 - Data provider: get data.
+INFO:2019-01-17 15:36:56,367 - Data provider: data put into data queue.
+INFO:2019-01-17 15:37:12,621 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:37:12,622 - Data provider: get data.
+INFO:2019-01-17 15:37:12,623 - Data provider: data put into data queue.
+INFO:2019-01-17 15:37:16,637 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:37:28,821 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:37:28,822 - Data provider: get data.
+INFO:2019-01-17 15:37:28,822 - Data provider: data put into data queue.
+INFO:2019-01-17 15:37:45,183 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:37:45,184 - Data provider: get data.
+INFO:2019-01-17 15:37:45,184 - Data provider: data put into data queue.
+INFO:2019-01-17 15:37:59,372 - Data consumer: get data with timestamp {}.
+INFO:2019-01-17 15:38:01,697 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:38:01,697 - Data provider: get data.
+INFO:2019-01-17 15:38:01,697 - Data provider: data put into data queue.
+INFO:2019-01-17 15:38:17,938 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:38:17,939 - Data provider: get data.
+INFO:2019-01-17 15:38:17,939 - Data provider: data put into data queue.
+INFO:2019-01-17 15:38:34,431 - crawlFR24: data got from flightradar24.
+INFO:2019-01-17 15:38:34,432 - Data provider: get data.
+INFO:2019-01-17 15:38:34,432 - Data provider: data put into data queue.
+INFO:2019-01-17 15:38:42,448 - Data consumer: get data with timestamp {}.
