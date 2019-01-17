@@ -226,12 +226,12 @@ class QLearningAgent:
         # print(x,y,z)
         cell = self.Map._map[position[0]][position[1]][z]
         rewardT = 0
-        rewardD = min(manhattanDistance(list(self.Map.runwayLocationCoordinate1)+[0],list(position)+[z]),manhattanDistance(list(self.Map.runwayLocationCoordinate2)+[0],list(position)+[z]))
+        rewardD = -min(manhattanDistance(list(self.Map.runwayLocationCoordinate1)+[0],list(position)+[z]),manhattanDistance(list(self.Map.runwayLocationCoordinate2)+[0],list(position)+[z]))
         if (position == self.Map.runwayLocationCoordinate1) or(position == self.Map.runwayLocationCoordinate2) and (z == 0):
             if (abs(a[1][0]) < 15) and (a[1][1] < 130):
                 rewardT = self.Map._map[position[0]][position[1]][0]
         # print('reward:',x,y,z,self.Map._map[x][y][z])
-        return (rewardS +cell+rewardT+rewardD/3)
+        return (rewardS +cell+rewardT+rewardD/4)
         # return self.livingReward
 
     # def getNextState(self,startState,action):
