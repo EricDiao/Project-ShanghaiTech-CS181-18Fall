@@ -144,6 +144,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
                 currentAgent.update(*lastExperience)
                 startState = endState
                 tempX, tempY = space.XYInDistToCoordinate((endState[0][0],endState[0][1]))
+                currentAgent.oldValues = currentAgent.values.copy()
                 # if(xxx == 1):
                 #     print('currentState:',tempX,tempY,endState[0][2],endState[1],ccc)
                 # print(ccc)
