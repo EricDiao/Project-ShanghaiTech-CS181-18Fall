@@ -1,6 +1,6 @@
 import random, traceback, sys, os
 sys.path.append("..")
-from util import Counter
+from util import Counter,manhattanDistance
 from airplane_models.airplane import baseAirplane
 from map_models.newMap import Map
 from math import sin,cos,sqrt,pi,acos
@@ -226,11 +226,12 @@ class QLearningAgent:
         # print(x,y,z)
         cell = self.Map._map[position[0]][position[1]][z]
         rewardT = 0
+        rewardD = min(manhattanDistance(list(self.Map.runwayLocationCoordinate1)+[0],list(position)+[z]),manhattanDistance(list(self.Map.runwayLocationCoordinate2)+[0],list(position)+[z]))
         if (position == self.Map.runwayLocationCoordinate1) or(position == self.Map.runwayLocationCoordinate2) and (z == 0):
             if (abs(a[1][0]) < 15) and (a[1][1] < 130):
                 rewardT = self.Map._map[position[0]][position[1]][0]
         # print('reward:',x,y,z,self.Map._map[x][y][z])
-        return (rewardS +cell+rewardT)
+        return (rewardS +cell+rewardT+rewardD/3)
         # return self.livingReward
 
     # def getNextState(self,startState,action):
