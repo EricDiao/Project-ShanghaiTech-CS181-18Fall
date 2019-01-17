@@ -13,7 +13,7 @@ import random
 from util import Counter
 
 
-def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
+def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count,visited):
     """
     `data_consumer(queue, interval)`
 
@@ -21,6 +21,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
     You may write your own one and replace `data_consumer` in the following "main function".
     """
     while True:
+        print('visited:',visited)
         data = queue.get()
         logging.info("Data consumer: get data with timestamp {}.")
         # print("get data: ")#,end=''
@@ -74,7 +75,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
         # if it is a plane within altitude 1000-6000 and preparing to land at CTU, then we put it into plane list.
         for i in planes:
             # print('i:',i)
-            if not i['flight'] in allPlanes.keys():
+            if (not i['flight'] in allPlanes.keys()) & (not i['flight'] in visited):
                 if (i['destination'] == "CTU") & ((i['altitude']-space._airportElevation) < 6000) & ((i['altitude']-space._airportElevation) > 1000) :
                     # print(i['altitude'])
                     agent = QLearningAgent(baseAirplane(i['flightType'],i['flight'],i['registration'],i['depature'],i['destination'],None,None,
@@ -82,6 +83,7 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
                     allPlanes[i['flight']] = agent
                     #store the state of all plane as another dict for convenience
                     allPlanesLocation[i['flight']] = [agent.X,agent.Y,agent.Z]
+                    visited.append(i['flight'])
         # print(allPlanes.keys())
                     # agent.stateReward = space._map[agent.X][agent.Y][agent.Z]
         # creat a temporary agent to do the training
@@ -229,6 +231,7 @@ if __name__ == "__main__":
     space = Map()
     print(space.runwayLocationCoordinate1,space.runwayLocationCoordinate2)
     print(len(space._map),len(space._map[0]),len(space._map[0][0]))
+    visited = []
     count = [7,7]
     allPlanes = Counter()
     allPlanesLocation = Counter()
@@ -236,7 +239,7 @@ if __name__ == "__main__":
     logging.info("Artifical Idiot ATC started.")
     data_queue = Queue()
     logging.info("Mutiprocessing: data queue initialized.")
-    data_consumer = Process(target=data_consumer, args=(data_queue, 10, space,allPlanes,allPlanesLocation,count))
+    data_consumer = Process(target=data_consumer, args=(data_queue, 10, space,allPlanes,allPlanesLocation,count,visited))
     logging.info("Mutiprocessing: data consumer initialized.")
     data_provider = Process(
         target=crawlFR24MultiprocessingWrapper, args=(border, data_queue, 15,))
