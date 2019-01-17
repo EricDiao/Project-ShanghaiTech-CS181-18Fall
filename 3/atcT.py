@@ -94,6 +94,8 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
         # space.values = tempAgent.values.copy()
         # change the value of the states where a plane is in the state
         # because planes within one state is a collision
+        newPlanes = Counter()
+        newPlanesLocation = Counter()
         
         for i in allPlanesLocation.values():
             for j in space.values.keys():
@@ -168,23 +170,30 @@ def data_consumer(queue, interval, space,allPlanes,allPlanesLocation,count):
             # print()
             # print('me and end:',[currentAgent.X,currentAgent.Y,currentAgent.Z],list(space.runwayLocationCoordinate1)+[0],list(space.runwayLocationCoordinate2)+[0])
             if ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate1)+[0]):
-                print(i)
-                print('landed:',allPlanes.pop(i))
-                print('landed:',allPlanesLocation.pop(i))
-                print(allPlanes.keys())
+                # print(i)
+                # print('landed:',allPlanes.pop(i))
+                # print('landed:',allPlanesLocation.pop(i))
+                # print(allPlanes.keys())
+                print('landed')
                 space._map[currentAgent.X][currentAgent.Y][0] = 20
                 count[0] = 0
-            if ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate2)+[0]):
-                print(i)
-                print('landed:',allPlanes.pop(i))
-                print('landed:',allPlanesLocation.pop(i))
-                print(allPlanes.keys())
+            elif ([currentAgent.X,currentAgent.Y,currentAgent.Z] == list(space.runwayLocationCoordinate2)+[0]):
+                # print(i)
+                # print('landed:',allPlanes.pop(i))
+                # print('landed:',allPlanesLocation.pop(i))
+                # print(allPlanes.keys())
+                print('landed')
                 space._map[currentAgent.X][currentAgent.Y][0] = 20
                 count[1] = 0
+            else:
+                newPlanes[i] = allPlanes[i]
+                newPlanesLocation[i] = allPlanesLocation[i]
         for i in tempPlaneLocation.values():
             space._map[i[0]][i[1]][i[2]] = space.tempValue[str(i)]
             # print('newvalue:',str(i),space._map[i[0]][i[1]][i[2]])
         space.tempPlaneLocation = Counter()
+        allPlanes = newPlanes.copy()
+        allPlanesLocation = newPlanesLocation.copy()
 
         '''
         I use both the initial value of the nextState and the Q value of the (state,action,nextState)
