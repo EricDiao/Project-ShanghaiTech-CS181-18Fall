@@ -231,7 +231,7 @@ class QLearningAgent:
             if (abs(a[1][0]) < 15) and (a[1][1] < 130):
                 rewardT = self.Map._map[position[0]][position[1]][0]
         # print('reward:',x,y,z,self.Map._map[x][y][z])
-        return (rewardS +cell+rewardT+rewardD/4)
+        return (rewardS +cell+rewardT+rewardD/(5+z/5))
         # return self.livingReward
 
     # def getNextState(self,startState,action):
